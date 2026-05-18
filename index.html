@@ -903,17 +903,20 @@ function calculate(){
     const name=nameEl?.value.trim()||nameEl?.placeholder||'?';
     const price=parseFloat(card.querySelector('[data-price]')?.value);
     const idx=parseInt(card.dataset.idx);
-    const {vol,unit}=getVolume(card);
+    let {vol,unit}=getVolume(card);
     const {effPrice,unitQty,tag}=calcEffective(card);
 
-    if(!price||!vol){showToast(t.err);return;}
+    if(!price){showToast(t.err);return;}
+    // If no amount entered, treat as 1 piece (compare by total price)
+    const noVol = !vol;
+    if(noVol){ vol = 1; unit = lang==='th'?'ชิ้น':'pcs'; }
 
     // effective price per base unit accounting for promo qty
     const effPriceForVol = effPrice; // price paid for (unitQty × vol) volume
     const totalVol = vol * unitQty;  // total volume you actually get
     const ppu = effPriceForVol / totalVol;
 
-    items.push({name,price,effPrice,totalVol,vol,ppu,unit,color:COLORS[idx%COLORS.length],idx,tag,unitQty});
+    items.push({name,price,effPrice,totalVol,vol,ppu,unit,color:COLORS[idx%COLORS.length],idx,tag,unitQty,noVol});
   }
 
   const sorted=[...items].sort((a,b)=>a.ppu-b.ppu);
