@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
 <!-- ── SEO ── -->
 <title>DealCheck 🛒 — Which deal is the best?</title>
@@ -495,7 +495,9 @@ addItem(); addItem();
 renderHist();
 
 // ── FONT SIZE ──
-let zoomLevel = 1.0;
+// In PWA standalone mode, bump zoom for readability (no URL bar = more space)
+const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+let zoomLevel = isStandaloneMode ? 1.2 : 1.0;
 document.getElementById('mainWrap').style.zoom = zoomLevel;
 function adjFont(dir){
   zoomLevel = Math.min(1.5, Math.max(0.7, +(zoomLevel + dir*0.1).toFixed(1)));

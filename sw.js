@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v2';
+const CACHE = 'dealcheck-v3';
 const ASSETS = [
   '/',
   '/index.html',
