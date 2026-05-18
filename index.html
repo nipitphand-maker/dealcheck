@@ -1031,10 +1031,34 @@ if(isIOS && !isStandalone){
   setTimeout(showInstallBtn, 800);
 }
 
-// ── SERVICE WORKER (PWA) ──
+// ── SERVICE WORKER + AUTO-UPDATE ──
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
-    navigator.serviceWorker.register('sw.js').catch(()=>{});
+    navigator.serviceWorker.register('/sw.js').then(reg=>{
+      // Check for updates immediately + every 30 min
+      reg.update();
+      setInterval(()=>reg.update(), 30*60*1000);
+
+      // When new SW found, show notice + auto-reload
+      reg.addEventListener('updatefound', ()=>{
+        const nw = reg.installing;
+        if(!nw) return;
+        nw.addEventListener('statechange', ()=>{
+          if(nw.state==='installed' && navigator.serviceWorker.controller){
+            showToast(lang==='th' ? '✨ มีเวอร์ชั่นใหม่ — กำลังโหลด...' : '✨ New version — reloading...');
+            setTimeout(()=>window.location.reload(), 1800);
+          }
+        });
+      });
+    }).catch(()=>{});
+  });
+
+  // Reload page when new SW takes control (e.g., after manual update)
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', ()=>{
+    if(refreshing) return;
+    refreshing = true;
+    window.location.reload();
   });
 }
 </script>
