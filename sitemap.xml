@@ -12,12 +12,12 @@
   </url>
 
   <url>
-    <loc>https://dealcheck-app.pages.dev/landing.html</loc>
+    <loc>https://dealcheck-app.pages.dev/landing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/landing.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/landing.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/landing.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/landing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/landing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/landing"/>
   </url>
 
   <url>
@@ -30,12 +30,30 @@
   </url>
 
   <url>
-    <loc>https://dealcheck-app.pages.dev/en/landing.html</loc>
+    <loc>https://dealcheck-app.pages.dev/en/landing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/landing.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/landing.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/landing.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/landing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/landing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/landing"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/privacy"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/privacy"/>
   </url>
 
 </urlset>

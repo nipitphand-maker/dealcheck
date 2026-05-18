@@ -1,0 +1,36 @@
+{
+  "name": "DealCheck — Find the best deal",
+  "short_name": "DealCheck",
+  "description": "Compare supermarket prices instantly. Supports % off, Buy 1 Get 1, and pack pricing. Auto unit-price calculation.",
+  "start_url": "/en/",
+  "scope": "/en/",
+  "display": "standalone",
+  "background_color": "#fef6fb",
+  "theme_color": "#f472b6",
+  "orientation": "portrait",
+  "lang": "en",
+  "categories": ["utilities", "shopping"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Compare two products"
+    }
+  ]
+}

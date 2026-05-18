@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <!-- ── SEO ── -->
 <title>DealCheck 🛒 — เปรียบราคาของ อันไหนคุ้มกว่า?</title>
@@ -63,7 +63,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;overflow-x:hidden}
-body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:80px;overflow-x:hidden;width:100%;font-size:16px}
+body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:calc(80px + env(safe-area-inset-bottom,0px));overflow-x:hidden;width:100%;font-size:16px}
 
 /* orbs */
 .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
@@ -77,9 +77,9 @@ body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--
 
 /* header */
 header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:14px}
-.logo{font-family:'Nunito',sans-serif;font-size:1.8rem;font-weight:900;letter-spacing:-1.5px;display:flex;align-items:center;gap:8px;line-height:1}
+.logo{font-family:'Nunito',sans-serif;font-size:1.8rem;font-weight:900;letter-spacing:-1.5px;display:flex;align-items:center;line-height:1}
 .logo .d{color:var(--pink)}.logo .c{color:var(--teal)}
-.logo-icon{width:34px;height:34px;border-radius:8px;flex-shrink:0}
+.logo-icon{width:34px;height:34px;border-radius:8px;flex-shrink:0;margin-left:10px}
 .hrow{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
 .lbtn{padding:3px 10px;border-radius:99px;border:2px solid var(--border);font-size:.72rem;font-weight:700;cursor:pointer;background:transparent;color:var(--sub);font-family:inherit;transition:all .18s}
 .lbtn.on{background:var(--text);color:#fff;border-color:var(--text)}
@@ -97,9 +97,10 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .ibtn{font-size:.95rem!important;animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08);box-shadow:0 0 0 6px rgba(244,114,182,.18)}}
 
-.ad,.ad-mid{max-width:100%;overflow:hidden;max-height:80px}
-.ad{background:#fff5fb;border:1px dashed #f0c0e0;border-radius:var(--rs);padding:4px 7px;text-align:center;color:var(--sub);font-size:.68rem;margin-bottom:10px;opacity:.8}
-.adsbygoogle{max-width:100%!important;max-height:60px!important;display:block;min-height:50px}
+.ad,.ad-mid,.ad-bottom{max-width:100%;overflow:hidden;max-height:100px}
+.ad,.ad-bottom{background:#fff5fb;border:1px dashed #f0c0e0;border-radius:var(--rs);padding:4px 7px;text-align:center;color:var(--sub);font-size:.68rem;margin-bottom:10px;opacity:.8}
+.ad-bottom{margin-top:14px;margin-bottom:0}
+.adsbygoogle{max-width:100%!important;max-height:80px!important;display:block;min-height:60px}
 
 /* ── COMPARE GRID ── */
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
@@ -256,7 +257,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
   background:rgba(254,246,251,.93);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-top:1.5px solid var(--border);
-  padding:9px 12px 16px;z-index:100;
+  padding:9px 12px calc(16px + env(safe-area-inset-bottom,0px));z-index:100;
 }
 .sticky-in{max-width:480px;margin:0 auto;display:flex;gap:8px}
 .cta-btn{
@@ -340,6 +341,17 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 
 footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 
+/* ── SEO content section ── */
+.seo-content{max-width:480px;margin:24px auto 0;padding:24px 16px 32px;position:relative;z-index:1;color:var(--text);line-height:1.7}
+.seo-content h1{font-size:1.35rem;font-weight:900;color:var(--text);margin-bottom:12px;text-align:center;line-height:1.3}
+.seo-content h2{font-size:1.05rem;font-weight:800;color:var(--text);margin-top:22px;margin-bottom:8px;padding-left:8px;border-left:3px solid var(--pink)}
+.seo-content p{font-size:.88rem;color:var(--text);margin-bottom:10px;opacity:.92}
+.seo-content ul{padding-left:22px;margin-bottom:12px}
+.seo-content li{font-size:.85rem;margin-bottom:6px;color:var(--text);opacity:.9}
+.seo-content strong{font-weight:800;color:var(--pink)}
+.seo-content em{font-style:normal;font-weight:700;color:var(--teal)}
+.seo-content a{color:var(--pink);text-decoration:underline}
+
 /* ── Desktop / tablet ── */
 @media (min-width:768px){
   body{font-size:20px;padding-bottom:110px}
@@ -371,6 +383,16 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
   .logo{font-size:3.6rem}
   .logo-icon{width:72px;height:72px}
 }
+@media (min-width:768px){
+  .seo-content{max-width:900px;padding:36px 32px 48px}
+  .seo-content h1{font-size:1.7rem}
+  .seo-content h2{font-size:1.25rem}
+  .seo-content p{font-size:1rem}
+  .seo-content li{font-size:.95rem}
+}
+@media (min-width:1024px){
+  .seo-content{max-width:1100px}
+}
 </style>
 </head>
 <body>
@@ -391,15 +413,20 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
     </div>
   </header>
 
+  <!-- AdSense ad slot — disabled until account approved + real slot ID assigned.
+       After approval: replace data-ad-slot="REPLACE_WITH_SLOT_ID" with the slot ID
+       from AdSense console (Ads → By ad unit → Create), then uncomment.
   <div class="ad">
     <ins class="adsbygoogle"
       style="display:block;min-height:50px"
       data-ad-client="ca-pub-7049269744581719"
-      data-ad-slot="auto"
+      data-ad-slot="REPLACE_WITH_SLOT_ID"
       data-ad-format="horizontal"
       data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+  -->
+
 
   <!-- ── FORM VIEW ── -->
   <div class="view on" id="vForm">
@@ -416,22 +443,55 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
       <div class="win-note" id="winNote"></div>
     </div>
     <div class="bars-card" id="barsCard"></div>
+    <!-- AdSense mid slot — disabled until approved (see top of file)
     <div class="ad-mid">
       <ins class="adsbygoogle"
         style="display:block;min-height:50px"
         data-ad-client="ca-pub-7049269744581719"
-        data-ad-slot="auto"
+        data-ad-slot="REPLACE_WITH_SLOT_ID"
         data-ad-format="horizontal"
         data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+    -->
+
     <div class="act-row">
       <button class="act-btn pk" onclick="shareResult()">📤 <span id="shareTxt">แชร์</span></button>
       <button class="act-btn" onclick="openH()">📋 <span id="histTxt">ประวัติ</span></button>
     </div>
-    <footer>DealCheck · ไม่เก็บข้อมูลส่วนตัว · <a href="landing.html" style="color:#a07898;text-decoration:none">เกี่ยวกับ</a> · <a href="privacy.html" style="color:#a07898;text-decoration:none">นโยบายความเป็นส่วนตัว</a></footer>
+    <footer>DealCheck · ไม่เก็บข้อมูลส่วนตัว · <a href="landing" style="color:#a07898;text-decoration:none">เกี่ยวกับ</a> · <a href="privacy" style="color:#a07898;text-decoration:none">นโยบายความเป็นส่วนตัว</a></footer>
   </div>
 </div>
+
+<!-- SEO + helpful content section -->
+<section class="seo-content">
+  <h1>เปรียบราคาสินค้าซูเปอร์มาร์เก็ตให้คุ้มที่สุด</h1>
+  <p>DealCheck เป็นเครื่องมือเปรียบเทียบราคาสินค้าออนไลน์ ทำงานได้ทันทีในซูเปอร์มาร์เก็ต ห้างสรรพสินค้า หรือร้านสะดวกซื้อ คำนวณ <strong>ราคาต่อหน่วย</strong> ให้อัตโนมัติ ใช้ฟรี ไม่ต้องโหลดแอป เปิดผ่าน browser ได้เลย รองรับทั้งภาษาไทยและอังกฤษ</p>
+
+  <h2>ทำไมต้องเปรียบราคาต่อหน่วย?</h2>
+  <p>ราคาที่แสดงข้างป้ายในซูเปอร์มักไม่บอกความจริงทั้งหมด สินค้าชิ้นใหญ่อาจดูแพงกว่า แต่เมื่อหารเป็นราคาต่อ ml หรือ g อาจถูกกว่าชิ้นเล็กมาก หรือบางที โปรโมชั่น <em>"1 แถม 1"</em> ที่ดูคุ้ม เทียบกับสินค้ายี่ห้ออื่นที่ลด 40% แล้ว อาจไม่คุ้มอย่างที่คิด</p>
+  <p>การเปรียบราคาต่อหน่วยจะช่วยให้ตัดสินใจซื้อได้แม่นยำที่สุด ประหยัดเงินทุกครั้งที่ไปซูเปอร์ ในระยะยาวอาจเก็บออมได้หลายพันบาทต่อปี โดยไม่ต้องเปลี่ยนวิถีการซื้อของ</p>
+
+  <h2>วิธีอ่านโปรโมชั่นให้ถูกต้อง</h2>
+  <p>โปรโมชั่นในซูเปอร์มีหลายรูปแบบ ต้องเข้าใจวิธีคำนวณราคาจริง:</p>
+  <ul>
+    <li><strong>1 แถม 1</strong> — เท่ากับลด 50% ต่อชิ้น (จ่าย 1 ได้ 2)</li>
+    <li><strong>2 แถม 1</strong> — เท่ากับลด ~33% ต่อชิ้น (จ่าย 2 ได้ 3)</li>
+    <li><strong>ลด % ตรงๆ</strong> — คำนวณจากราคาเดิม เช่น ลด 40% หมายถึงจ่ายแค่ 60%</li>
+    <li><strong>แพคใหญ่</strong> — ต้องดูปริมาณรวม × ราคา เช่น โค้ก 6 กระป๋อง × 325ml = 1,950ml รวม</li>
+    <li><strong>กำหนดเอง</strong> — เช่น ซื้อ 3 แถม 2, ซื้อ 4 แถม 1 ก็คำนวณได้</li>
+  </ul>
+  <p>DealCheck รองรับโปรโมชั่นทุกรูปแบบนี้ — แค่เลือกประเภท promo ที่ใช้ แอปจะปรับราคาจริงให้ทันที</p>
+
+  <h2>ตัวอย่างการใช้งานจริง</h2>
+  <p><strong>ตัวอย่าง 1 — เลือกน้ำดื่ม</strong>: น้ำขนาด 600ml ราคา 15 บาท ลด 20% เทียบกับน้ำขนาด 1.5 ลิตร แพคละ 30 บาท ใส่ DealCheck เห็นทันทีว่าน้ำใหญ่ ราคาต่อ ml ถูกกว่าประมาณ 33%</p>
+  <p><strong>ตัวอย่าง 2 — เลือกแชมพู</strong>: แชมพู A ขนาด 350ml ราคา 119 บาท มี 1 แถม 1 เทียบกับแชมพู B ขนาด 480ml ราคา 159 บาท DealCheck คำนวณให้: A เฉลี่ย 0.17 บาท/ml, B เฉลี่ย 0.33 บาท/ml — A คุ้มกว่าเกือบเท่าตัว</p>
+
+  <h2>ความเป็นส่วนตัว — ฟรีจริง ไม่เก็บข้อมูล</h2>
+  <p>DealCheck สร้างมาเพื่อช่วยคนซื้อของในชีวิตประจำวัน <strong>ไม่มีบัญชี ไม่ต้อง login ไม่เก็บข้อมูลส่วนตัว</strong> ประวัติการเปรียบเทียบทั้งหมดเก็บไว้บนเครื่องของคุณ (browser local storage) เท่านั้น ไม่ได้ส่งไปเซิร์ฟเวอร์ที่ไหน</p>
+  <p>เว็บนี้แสดงโฆษณาแบบ banner เล็กๆ จาก Google AdSense เพื่อสนับสนุนการพัฒนา ไม่มีโฆษณาเต็มจอ ไม่มี popup กวนใจ และข้อมูลส่วนตัวของคุณจะไม่ถูกแชร์ไปไหน อ่านรายละเอียดเพิ่มเติมที่ <a href="/privacy">นโยบายความเป็นส่วนตัว</a></p>
+  <p>ติดตั้งเป็นแอปบนมือถือได้ทันที — กดปุ่ม 📲 ในแถบ header → "Add to Home Screen" → ใช้งานได้แม้ไม่มีอินเทอร์เน็ต</p>
+</section>
 
 <!-- sticky bar -->
 <div class="sticky">
@@ -545,7 +605,7 @@ function applyLang(){
   const t=T[lang];
   qi('addTxt',t.addTxt); qi('ctaTxt',t.cta); qi('backTxt',t.back);
   qi('shareTxt',t.share); qi('histTxt',t.hist); qi('dTitle',t.dTitle); qi('clrBtn',t.clrBtn);
-  document.querySelectorAll('.item-card[data-idx]').forEach(c=>refreshCardLang(c));
+  document.querySelectorAll('.card[data-idx]').forEach(c=>refreshCardLang(c));
   renderHist();
 }
 function qi(id,txt){const e=document.getElementById(id);if(e)e.textContent=txt;}
@@ -802,7 +862,7 @@ function baseUnit(u){return u==='l'?'ml':u==='kg'?'g':u==='pcs'?T[lang].pcs:u;}
 // ── CALCULATE ──
 function calculate(){
   const t=T[lang];
-  const cards=[...document.querySelectorAll('.item-card[data-idx]')];
+  const cards=[...document.querySelectorAll('.card[data-idx]')];
   if(cards.length<2){showToast(t.errMin);return;}
 
   const items=[];
@@ -855,7 +915,7 @@ function calculate(){
   setTimeout(()=>document.querySelectorAll('.bar-fill[data-w]').forEach(e=>e.style.width=e.dataset.w+'%'),80);
 
   // winner highlight on cards
-  document.querySelectorAll('.item-card[data-idx]').forEach(c=>{
+  document.querySelectorAll('.card[data-idx]').forEach(c=>{
     c.classList.toggle('win',parseInt(c.dataset.idx)===winner.idx&&!isTie);
   });
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <!-- ── SEO ── -->
 <title>DealCheck 🛒 — Which deal is the best?</title>
@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://dealcheck-app.pages.dev/og-image.png">
 
 <!-- ── PWA ── -->
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/en/manifest.json">
 <meta name="theme-color" content="#f472b6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -64,7 +64,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{font-size:16px;overflow-x:hidden}
-body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:80px;overflow-x:hidden;width:100%;font-size:16px}
+body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:calc(80px + env(safe-area-inset-bottom,0px));overflow-x:hidden;width:100%;font-size:16px}
 
 /* orbs */
 .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
@@ -78,9 +78,9 @@ body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--
 
 /* header */
 header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:14px}
-.logo{font-family:'Nunito',sans-serif;font-size:1.8rem;font-weight:900;letter-spacing:-1.5px;display:flex;align-items:center;gap:8px;line-height:1}
+.logo{font-family:'Nunito',sans-serif;font-size:1.8rem;font-weight:900;letter-spacing:-1.5px;display:flex;align-items:center;line-height:1}
 .logo .d{color:var(--pink)}.logo .c{color:var(--teal)}
-.logo-icon{width:34px;height:34px;border-radius:8px;flex-shrink:0}
+.logo-icon{width:34px;height:34px;border-radius:8px;flex-shrink:0;margin-left:10px}
 .hrow{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
 .lbtn{padding:3px 10px;border-radius:99px;border:2px solid var(--border);font-size:.72rem;font-weight:700;cursor:pointer;background:transparent;color:var(--sub);font-family:inherit;transition:all .18s}
 .lbtn.on{background:var(--text);color:#fff;border-color:var(--text)}
@@ -257,7 +257,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
   background:rgba(254,246,251,.93);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-top:1.5px solid var(--border);
-  padding:9px 12px 16px;z-index:100;
+  padding:9px 12px calc(16px + env(safe-area-inset-bottom,0px));z-index:100;
 }
 .sticky-in{max-width:480px;margin:0 auto;display:flex;gap:8px}
 .cta-btn{
@@ -341,6 +341,17 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 
 footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 
+/* ── SEO content section ── */
+.seo-content{max-width:480px;margin:24px auto 0;padding:24px 16px 32px;position:relative;z-index:1;color:var(--text);line-height:1.7}
+.seo-content h1{font-size:1.35rem;font-weight:900;color:var(--text);margin-bottom:12px;text-align:center;line-height:1.3}
+.seo-content h2{font-size:1.05rem;font-weight:800;color:var(--text);margin-top:22px;margin-bottom:8px;padding-left:8px;border-left:3px solid var(--pink)}
+.seo-content p{font-size:.88rem;color:var(--text);margin-bottom:10px;opacity:.92}
+.seo-content ul{padding-left:22px;margin-bottom:12px}
+.seo-content li{font-size:.85rem;margin-bottom:6px;color:var(--text);opacity:.9}
+.seo-content strong{font-weight:800;color:var(--pink)}
+.seo-content em{font-style:normal;font-weight:700;color:var(--teal)}
+.seo-content a{color:var(--pink);text-decoration:underline}
+
 /* ── Desktop / tablet ── */
 @media (min-width:768px){
   body{font-size:20px;padding-bottom:110px}
@@ -372,6 +383,16 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
   .logo{font-size:3.6rem}
   .logo-icon{width:72px;height:72px}
 }
+@media (min-width:768px){
+  .seo-content{max-width:900px;padding:36px 32px 48px}
+  .seo-content h1{font-size:1.7rem}
+  .seo-content h2{font-size:1.25rem}
+  .seo-content p{font-size:1rem}
+  .seo-content li{font-size:.95rem}
+}
+@media (min-width:1024px){
+  .seo-content{max-width:1100px}
+}
 </style>
 </head>
 <body>
@@ -392,15 +413,19 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
     </div>
   </header>
 
+  <!-- AdSense ad slot — disabled until account approved + real slot ID assigned.
+       After approval: replace data-ad-slot="REPLACE_WITH_SLOT_ID" with the slot ID, then uncomment.
   <div class="ad">
     <ins class="adsbygoogle"
       style="display:block;min-height:50px"
       data-ad-client="ca-pub-7049269744581719"
-      data-ad-slot="auto"
+      data-ad-slot="REPLACE_WITH_SLOT_ID"
       data-ad-format="horizontal"
       data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+  -->
+
 
   <!-- ── FORM VIEW ── -->
   <div class="view on" id="vForm">
@@ -417,22 +442,55 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
       <div class="win-note" id="winNote"></div>
     </div>
     <div class="bars-card" id="barsCard"></div>
+    <!-- AdSense mid slot — disabled until approved
     <div class="ad-mid">
       <ins class="adsbygoogle"
         style="display:block;min-height:50px"
         data-ad-client="ca-pub-7049269744581719"
-        data-ad-slot="auto"
+        data-ad-slot="REPLACE_WITH_SLOT_ID"
         data-ad-format="horizontal"
         data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+    -->
+
     <div class="act-row">
       <button class="act-btn pk" onclick="shareResult()">📤 <span id="shareTxt">Share</span></button>
       <button class="act-btn" onclick="openH()">📋 <span id="histTxt">History</span></button>
     </div>
-    <footer>DealCheck · No personal data collected · <a href="landing.html" style="color:#a07898;text-decoration:none">About</a> · <a href="privacy.html" style="color:#a07898;text-decoration:none">Privacy Policy</a></footer>
+    <footer>DealCheck · No personal data collected · <a href="landing" style="color:#a07898;text-decoration:none">About</a> · <a href="privacy" style="color:#a07898;text-decoration:none">Privacy Policy</a></footer>
   </div>
 </div>
+
+<!-- SEO + helpful content section -->
+<section class="seo-content">
+  <h1>Find the Best Supermarket Deal — Every Time</h1>
+  <p>DealCheck is a free online price comparison tool that works instantly in any supermarket, grocery store, or convenience shop. Auto <strong>unit-price calculation</strong> — no app download required, runs directly in your browser. Supports Thai and English.</p>
+
+  <h2>Why compare unit prices?</h2>
+  <p>Shelf prices don't tell the whole story. A larger bottle might look expensive, but when broken down to price per ml or g, it could be cheaper than the smaller one. A <em>"Buy 1 Get 1"</em> promo might look like a steal, but compared to a 40% off competing brand, it's not always the better deal.</p>
+  <p>Comparing unit prices helps you make the right decision every time — saving money on every grocery trip. Over a year, those small differences can add up to hundreds of dollars in savings without changing how you shop.</p>
+
+  <h2>How to read supermarket promos</h2>
+  <p>Supermarket promos come in many forms. Understanding the real cost matters:</p>
+  <ul>
+    <li><strong>Buy 1 Get 1 (BOGO)</strong> — equals 50% off per item (pay for 1, get 2)</li>
+    <li><strong>Buy 2 Get 1</strong> — equals ~33% off (pay for 2, get 3)</li>
+    <li><strong>% off</strong> — straight discount from original price (40% off = pay only 60%)</li>
+    <li><strong>Multi-pack</strong> — check total volume × price, e.g., 6-pack × 325ml = 1,950ml total</li>
+    <li><strong>Custom</strong> — buy 3 get 2, buy 4 get 1, any combo — DealCheck handles it</li>
+  </ul>
+  <p>Pick the promo type in DealCheck and the app calculates the real per-unit cost instantly.</p>
+
+  <h2>Real-world examples</h2>
+  <p><strong>Example 1 — Bottled water</strong>: A 600ml bottle at $1 with 20% off vs a 1.5L bottle at $2. Drop both into DealCheck — the large bottle is roughly 33% cheaper per ml.</p>
+  <p><strong>Example 2 — Shampoo</strong>: Brand A at 350ml for $5 with Buy 1 Get 1, vs Brand B at 480ml for $7. DealCheck shows A at $0.007/ml vs B at $0.015/ml — A is more than twice as cheap.</p>
+
+  <h2>Privacy-first, free forever</h2>
+  <p>DealCheck was built for everyday shoppers — <strong>no accounts, no login, no personal data tracking</strong>. All your comparison history stays in your browser's local storage, nothing is sent to any server.</p>
+  <p>The site shows small banner ads from Google AdSense to support development — no full-screen popups, no intrusive overlays, and your data is never shared. Read more at our <a href="/en/privacy">Privacy Policy</a>.</p>
+  <p>Install as a mobile app: tap 📲 in the header → "Add to Home Screen" → use it anywhere, even offline.</p>
+</section>
 
 <!-- sticky bar -->
 <div class="sticky">
@@ -546,7 +604,7 @@ function applyLang(){
   const t=T[lang];
   qi('addTxt',t.addTxt); qi('ctaTxt',t.cta); qi('backTxt',t.back);
   qi('shareTxt',t.share); qi('histTxt',t.hist); qi('dTitle',t.dTitle); qi('clrBtn',t.clrBtn);
-  document.querySelectorAll('.item-card[data-idx]').forEach(c=>refreshCardLang(c));
+  document.querySelectorAll('.card[data-idx]').forEach(c=>refreshCardLang(c));
   renderHist();
 }
 function qi(id,txt){const e=document.getElementById(id);if(e)e.textContent=txt;}
@@ -803,7 +861,7 @@ function baseUnit(u){return u==='l'?'ml':u==='kg'?'g':u==='pcs'?T[lang].pcs:u;}
 // ── CALCULATE ──
 function calculate(){
   const t=T[lang];
-  const cards=[...document.querySelectorAll('.item-card[data-idx]')];
+  const cards=[...document.querySelectorAll('.card[data-idx]')];
   if(cards.length<2){showToast(t.errMin);return;}
 
   const items=[];
@@ -856,7 +914,7 @@ function calculate(){
   setTimeout(()=>document.querySelectorAll('.bar-fill[data-w]').forEach(e=>e.style.width=e.dataset.w+'%'),80);
 
   // winner highlight on cards
-  document.querySelectorAll('.item-card[data-idx]').forEach(c=>{
+  document.querySelectorAll('.card[data-idx]').forEach(c=>{
     c.classList.toggle('win',parseInt(c.dataset.idx)===winner.idx&&!isTie);
   });
 
