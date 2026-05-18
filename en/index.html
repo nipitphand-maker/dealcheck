@@ -360,6 +360,11 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 .seo-content strong{font-weight:800;color:var(--pink)}
 .seo-content em{font-style:normal;font-weight:700;color:var(--teal)}
 .seo-content a{color:var(--pink);text-decoration:underline}
+.article-cards{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+.article-card{display:block;padding:14px 16px;background:#fdf2f8;border:2px solid #f0d6eb;border-radius:14px;text-decoration:none!important;color:var(--text)!important;transition:all .18s}
+.article-card:hover{border-color:var(--pink);transform:translateY(-1px);box-shadow:0 4px 14px rgba(244,114,182,.15)}
+.article-card strong{display:block;font-size:.95rem;margin-bottom:4px;color:var(--text)!important;font-weight:800}
+.article-card span{display:block;font-size:.8rem;color:var(--sub);opacity:1;line-height:1.5}
 
 /* ── Desktop / tablet ── */
 @media (min-width:768px){
@@ -499,6 +504,24 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
   <p>DealCheck was built for everyday shoppers — <strong>no accounts, no login, no personal data tracking</strong>. All your comparison history stays in your browser's local storage, nothing is sent to any server.</p>
   <p>The site shows small banner ads from Google AdSense to support development — no full-screen popups, no intrusive overlays, and your data is never shared. Read more at our <a href="/en/privacy">Privacy Policy</a>.</p>
   <p>Install as a mobile app: tap 📲 in the header → "Add to Home Screen" → use it anywhere, even offline.</p>
+
+  <h2>📚 Related reading</h2>
+  <p>Articles to help you shop smarter every time:</p>
+  <div class="article-cards">
+    <a href="/blog/bogo-vs-discount" class="article-card">
+      <strong>Buy 1 Get 1 vs 40% off — which is better?</strong>
+      <span>The math behind supermarket promos — know what to pick · 4 min read</span>
+    </a>
+    <a href="/blog/supermarket-tips" class="article-card">
+      <strong>7 tips for smarter supermarket shopping</strong>
+      <span>Techniques real frugal shoppers use, from price labels to timing · 5 min read</span>
+    </a>
+    <a href="/blog/pack-vs-bottle" class="article-card">
+      <strong>Why multi-packs are sometimes MORE expensive than singles</strong>
+      <span>Inside supermarket pricing strategy + 8 real examples · 4 min read</span>
+    </a>
+  </div>
+  <p style="text-align:center;margin-top:14px"><a href="/blog/" style="color:var(--pink);text-decoration:underline;font-weight:700">→ See all articles</a></p>
 </section>
 
 <!-- sticky bar -->

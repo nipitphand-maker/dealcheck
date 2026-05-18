@@ -360,6 +360,11 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 .seo-content strong{font-weight:800;color:var(--pink)}
 .seo-content em{font-style:normal;font-weight:700;color:var(--teal)}
 .seo-content a{color:var(--pink);text-decoration:underline}
+.article-cards{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+.article-card{display:block;padding:14px 16px;background:#fdf2f8;border:2px solid #f0d6eb;border-radius:14px;text-decoration:none!important;color:var(--text)!important;transition:all .18s}
+.article-card:hover{border-color:var(--pink);transform:translateY(-1px);box-shadow:0 4px 14px rgba(244,114,182,.15)}
+.article-card strong{display:block;font-size:.95rem;margin-bottom:4px;color:var(--text)!important;font-weight:800}
+.article-card span{display:block;font-size:.8rem;color:var(--sub);opacity:1;line-height:1.5}
 
 /* ── Desktop / tablet ── */
 @media (min-width:768px){
@@ -500,6 +505,24 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
   <p>DealCheck สร้างมาเพื่อช่วยคนซื้อของในชีวิตประจำวัน <strong>ไม่มีบัญชี ไม่ต้อง login ไม่เก็บข้อมูลส่วนตัว</strong> ประวัติการเปรียบเทียบทั้งหมดเก็บไว้บนเครื่องของคุณ (browser local storage) เท่านั้น ไม่ได้ส่งไปเซิร์ฟเวอร์ที่ไหน</p>
   <p>เว็บนี้แสดงโฆษณาแบบ banner เล็กๆ จาก Google AdSense เพื่อสนับสนุนการพัฒนา ไม่มีโฆษณาเต็มจอ ไม่มี popup กวนใจ และข้อมูลส่วนตัวของคุณจะไม่ถูกแชร์ไปไหน อ่านรายละเอียดเพิ่มเติมที่ <a href="/privacy">นโยบายความเป็นส่วนตัว</a></p>
   <p>ติดตั้งเป็นแอปบนมือถือได้ทันที — กดปุ่ม 📲 ในแถบ header → "Add to Home Screen" → ใช้งานได้แม้ไม่มีอินเทอร์เน็ต</p>
+
+  <h2>📚 อ่านเพิ่มเติม</h2>
+  <p>บทความที่จะช่วยให้คุณช้อปคุ้มขึ้นทุกครั้ง:</p>
+  <div class="article-cards">
+    <a href="/blog/bogo-vs-discount" class="article-card">
+      <strong>1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า?</strong>
+      <span>คณิตเบื้องหลังโปรโมชั่นในซูเปอร์ — รู้เลยว่าเลือกอะไร · 4 นาที</span>
+    </a>
+    <a href="/blog/supermarket-tips" class="article-card">
+      <strong>7 เคล็ดลับช้อปซูเปอร์ให้คุ้ม</strong>
+      <span>เทคนิคที่นักช้อปประหยัดใช้จริง ตั้งแต่อ่านป้ายราคา ไปจนเวลาไปซูเปอร์ · 5 นาที</span>
+    </a>
+    <a href="/blog/pack-vs-bottle" class="article-card">
+      <strong>ทำไมแพคใหญ่บางครั้งแพงกว่า ขวดเล็ก?</strong>
+      <span>เปิดกลยุทธ์ตั้งราคาของซูเปอร์ + ตัวอย่างจริง 8 รายการ · 4 นาที</span>
+    </a>
+  </div>
+  <p style="text-align:center;margin-top:14px"><a href="/blog/" style="color:var(--pink);text-decoration:underline;font-weight:700">→ ดูบทความทั้งหมด</a></p>
 </section>
 
 <!-- sticky bar -->
