@@ -41,6 +41,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"DealCheck","description":"Compare supermarket prices, calculate unit prices, supports BOGO and % off promotions","url":"https://dealcheck-app.pages.dev","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":["en","th"],"featureList":["Unit price comparison","Supports Buy 1 Get 1, Buy 2 Get 1, % off promotions","Compare multiple items at once","Works offline","Free, no fullscreen ads"]}
+</script>
+
+<!-- Structured Data — FAQPage -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if a Buy 1 Get 1 promo beats buying two smaller items?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck to compare unit prices instantly. Enter the price and quantity of each item, pick the promo, and the app tells you which one is cheaper per ml or g."}},{"@type":"Question","name":"Which is better: 40% off or Buy 1 Get 1?","acceptedAnswer":{"@type":"Answer","text":"Buy 1 Get 1 equals a 50% discount, so for the same product BOGO always beats 40% off. But for different brands or sizes you need to compare unit prices — DealCheck does it for you."}},{"@type":"Question","name":"How do I compare items of different sizes, like 250ml vs 1 liter?","acceptedAnswer":{"@type":"Answer","text":"Enter the price and quantity of each size, pick the right unit (ml or L), and DealCheck converts units and calculates price per ml so you can compare instantly."}},{"@type":"Question","name":"A 6-pack of Coke at $5 vs a 1.25L bottle at $1.20 — which is cheaper?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck pack mode: enter 6 cans × 325ml at $5 versus a 1250ml bottle at $1.20. The app calculates the price per ml for both instantly."}}]}
+</script>
+
 <!-- AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
 
@@ -457,7 +467,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
       <button class="act-btn pk" onclick="shareResult()">📤 <span id="shareTxt">Share</span></button>
       <button class="act-btn" onclick="openH()">📋 <span id="histTxt">History</span></button>
     </div>
-    <footer>DealCheck · No personal data collected · <a href="landing" style="color:#a07898;text-decoration:none">About</a> · <a href="privacy" style="color:#a07898;text-decoration:none">Privacy Policy</a></footer>
+    <footer>DealCheck · No personal data collected · <a href="/en/about" style="color:#a07898;text-decoration:none">About</a> · <a href="privacy" style="color:#a07898;text-decoration:none">Privacy Policy</a></footer>
   </div>
 </div>
 

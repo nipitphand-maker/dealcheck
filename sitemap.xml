@@ -56,4 +56,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/privacy"/>
   </url>
 
+  <url>
+    <loc>https://dealcheck-app.pages.dev/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/about"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealcheck-app.pages.dev/about"/>
+  </url>
+
 </urlset>

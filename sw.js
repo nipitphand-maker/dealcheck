@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v6';
+const CACHE = 'dealcheck-v7';
 const ASSETS = [
   '/',
   '/index.html',
@@ -8,6 +8,8 @@ const ASSETS = [
   '/en/index.html',
   '/en/landing.html',
   '/en/privacy.html',
+  '/about.html',
+  '/en/about.html',
   '/manifest.json',
   '/en/manifest.json',
   '/favicon-32.png',
