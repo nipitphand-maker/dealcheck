@@ -94,8 +94,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .ios-modal-content h3{margin-bottom:14px;font-size:1.05rem;font-weight:800;color:#3d2645}
 .ios-modal-content ol{padding-left:24px;margin-bottom:14px}
 .ios-modal-content li{margin-bottom:10px;font-size:.88rem;line-height:1.6}
-.ibtn{font-size:.95rem!important;animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08);box-shadow:0 0 0 6px rgba(244,114,182,.18)}}
+.ibtn{background:var(--pink)!important;color:#fff!important;border-color:var(--pink)!important}
 
 .ad,.ad-mid,.ad-bottom{max-width:100%;overflow:hidden;max-height:100px}
 .ad,.ad-bottom{background:#fff5fb;border:1px dashed #f0c0e0;border-radius:var(--rs);padding:4px 7px;text-align:center;color:var(--sub);font-size:.68rem;margin-bottom:10px;opacity:.8}
@@ -402,14 +401,14 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
   <header>
     <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="icon-192.png" alt="" class="logo-icon"></div>
     <div class="hrow">
-      <a class="lbtn on" href="/" aria-label="ภาษาไทย">🇹🇭</a>
-      <a class="lbtn" href="/en/" aria-label="English">🇬🇧</a>
+      <a class="lbtn on" href="/" aria-label="ภาษาไทย">TH</a>
+      <a class="lbtn" href="/en/" aria-label="English">EN</a>
       <div class="font-btns">
         <button class="fbtn fminus" onclick="adjFont(-1)" title="ลดขนาด">A−</button>
         <button class="fbtn fplus" onclick="adjFont(1)" title="เพิ่มขนาด">A+</button>
       </div>
-      <button class="hbtn" onclick="openH()" title="ประวัติ">📋</button>
-      <button class="hbtn ibtn" id="installBtn" onclick="installPWA()" title="ติดตั้งเป็นแอป" style="display:none">📲</button>
+      <button class="lbtn hist-btn" onclick="openH()" title="ประวัติการเปรียบเทียบ">ประวัติ</button>
+      <button class="lbtn ibtn" id="installBtn" onclick="installPWA()" title="ติดตั้งเป็นแอป" style="display:none">ติดตั้ง</button>
     </div>
   </header>
 
