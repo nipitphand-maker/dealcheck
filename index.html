@@ -494,7 +494,7 @@ addItem(); addItem();
 renderHist();
 
 // ── FONT SIZE ──
-let zoomLevel = 1.5;
+let zoomLevel = 1.0;
 document.getElementById('mainWrap').style.zoom = zoomLevel;
 function adjFont(dir){
   zoomLevel = Math.min(1.5, Math.max(0.7, +(zoomLevel + dir*0.1).toFixed(1)));
