@@ -62,8 +62,8 @@
   --rs: 10px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{font-size:16px}
-body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:80px;overflow-x:hidden;font-size:16px}
+html{font-size:16px;overflow-x:hidden}
+body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:80px;overflow-x:hidden;width:100%;font-size:16px}
 
 /* orbs */
 .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
@@ -86,7 +86,9 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
 .hbtn:hover{border-color:var(--pink)}
 
 /* ad */
+.ad,.ad-mid{max-width:100%;overflow:hidden;display:none}/* hidden until AdSense approved + real slot IDs */
 .ad{background:#fff5fb;border:1px dashed #f0c0e0;border-radius:var(--rs);padding:7px;text-align:center;color:var(--sub);font-size:.68rem;margin-bottom:10px;opacity:.8}
+.adsbygoogle{max-width:100%!important;display:block}
 
 /* ── COMPARE GRID ── */
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
@@ -383,7 +385,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
       <button class="act-btn pk" onclick="shareResult()">📤 <span id="shareTxt">แชร์</span></button>
       <button class="act-btn" onclick="openH()">📋 <span id="histTxt">ประวัติ</span></button>
     </div>
-    <footer>DealCheck · ไม่เก็บข้อมูลส่วนตัว · <a href="landing.html" style="color:#a07898;text-decoration:none">เกี่ยวกับ</a></footer>
+    <footer>DealCheck · ไม่เก็บข้อมูลส่วนตัว · <a href="landing.html" style="color:#a07898;text-decoration:none">เกี่ยวกับ</a> · <a href="privacy.html" style="color:#a07898;text-decoration:none">นโยบายความเป็นส่วนตัว</a></footer>
   </div>
 </div>
 
