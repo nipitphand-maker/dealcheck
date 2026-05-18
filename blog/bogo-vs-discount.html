@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า? (คำนวณให้เห็น) — DealCheck</title>
+<meta name="description" content="เปรียบโปรโมชั่น 1 แถม 1 vs ลด % กับ 2 แถม 1 พร้อมตารางสรุปและคณิตเบื้องหลัง ใช้ DealCheck คำนวณราคาต่อหน่วยอัตโนมัติ">
+<meta name="keywords" content="1 แถม 1 คุ้มมั้ย,ลดราคา,เปรียบโปรโมชั่น,ราคาต่อหน่วย,ซูเปอร์มาร์เก็ต">
+<link rel="canonical" href="https://dealcheck-app.pages.dev/blog/bogo-vs-discount">
+<link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/bogo-vs-discount">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f472b6">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dealcheck-app.pages.dev/blog/bogo-vs-discount">
+<meta property="og:title" content="1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า? (คำนวณให้เห็น)">
+<meta property="og:description" content="คณิตเบื้องหลัง 1 แถม 1, 2 แถม 1, ลด% และวิธีเลือกของในซูเปอร์ให้คุ้มที่สุด">
+<meta property="og:image" content="https://dealcheck-app.pages.dev/og-image.jpg">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า? (คำนวณให้เห็น)","description":"เปรียบโปรโมชั่น 1 แถม 1 vs ลด % กับ 2 แถม 1 พร้อมตารางสรุปและคณิตเบื้องหลัง","datePublished":"2026-05-18","dateModified":"2026-05-18","author":{"@type":"Person","name":"Nipitphand"},"publisher":{"@type":"Organization","name":"DealCheck","logo":{"@type":"ImageObject","url":"https://dealcheck-app.pages.dev/icon-512.png"}},"image":"https://dealcheck-app.pages.dev/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://dealcheck-app.pages.dev/blog/bogo-vs-discount"}}
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.8;padding:24px 16px 80px}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Sarabun:wght@400;600;700;800&display=swap');
+.wrap{max-width:720px;margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #f0d6eb}
+.logo{font-family:'Nunito',sans-serif;font-size:1.3rem;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.logo .d{color:#f472b6}.logo .c{color:#2dd4bf}
+.logo img{width:32px;height:32px;border-radius:6px}
+.back{font-size:.85rem;color:#a07898;text-decoration:none;font-weight:700}
+.back:hover{color:#f472b6}
+article{background:#fff;border:2px solid #f0d6eb;border-radius:20px;padding:32px 26px;box-shadow:0 4px 20px rgba(244,114,182,.06)}
+h1{font-size:1.6rem;font-weight:900;margin-bottom:8px;color:#3d2645;line-height:1.3;letter-spacing:-.5px}
+.meta{color:#a07898;font-size:.82rem;margin-bottom:20px;font-weight:600}
+.lede{font-size:1.02rem;color:#3d2645;margin-bottom:20px;background:#fdf2f8;padding:14px 16px;border-radius:12px;border-left:4px solid #f472b6}
+h2{font-size:1.2rem;font-weight:800;margin:28px 0 12px;color:#3d2645;padding-left:10px;border-left:4px solid #2dd4bf}
+h3{font-size:1.05rem;font-weight:800;margin:18px 0 8px;color:#3d2645}
+p{margin-bottom:14px;font-size:.95rem;color:#3d2645}
+ul,ol{padding-left:24px;margin-bottom:14px}
+li{font-size:.95rem;margin-bottom:8px}
+.calc{background:#f0fdf4;border:1.5px dashed #2dd4bf;border-radius:10px;padding:12px 14px;margin:14px 0;font-family:'Courier New',monospace;font-size:.88rem;line-height:1.7}
+.calc strong{color:#10b981;font-family:'Sarabun',sans-serif}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.9rem}
+th{background:#f472b6;color:#fff;padding:10px 12px;text-align:left;font-weight:800}
+td{padding:9px 12px;border-bottom:1px solid #f0d6eb}
+tr:nth-child(even) td{background:#fdf2f8}
+.cta{background:linear-gradient(135deg,#fdf2f8,#f0fdf4);border:2px solid #f0d6eb;border-radius:16px;padding:22px;margin:28px 0;text-align:center}
+.cta h3{margin-bottom:8px;color:#3d2645}
+.cta-btn{display:inline-block;margin-top:10px;padding:12px 26px;background:linear-gradient(135deg,#f472b6,#fb7185);color:#fff;border-radius:99px;font-weight:800;font-size:.95rem;text-decoration:none;box-shadow:0 4px 14px rgba(244,114,182,.3)}
+.cta-btn:hover{transform:translateY(-1px)}
+strong{color:#f472b6;font-weight:800}
+em{font-style:normal;font-weight:800;color:#2dd4bf}
+a{color:#f472b6;text-decoration:underline}
+.related{margin-top:36px;padding-top:24px;border-top:2px solid #f0d6eb}
+.related h2{margin-top:0}
+.related a{display:block;padding:14px;background:#fdf2f8;border-radius:12px;margin-bottom:10px;text-decoration:none;color:#3d2645;border:1.5px solid #f0d6eb}
+.related a:hover{border-color:#f472b6}
+.related a strong{display:block;font-size:1rem;margin-bottom:4px;color:#3d2645}
+.related a span{font-size:.85rem;color:#a07898}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/"><span><span class="d">Deal</span><span class="c">Check</span></span><img src="/icon-192.png" alt=""></a>
+    <a class="back" href="/blog/">← บล็อก</a>
+  </header>
+
+  <article>
+    <h1>1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า? (คำนวณให้เห็นเลย)</h1>
+    <p class="meta">18 พฤษภาคม 2026 · อ่าน ~4 นาที</p>
+
+    <p class="lede">เคยเจอไหม? เดินเซเว่นเห็นโค้กลด 40% แต่ในแม็คโครใกล้ๆ มีโปร 1 แถม 1 ราคาเริ่มต้นเหมือนกันเป๊ะ. คนส่วนใหญ่เลือก "ลด 40%" เพราะตัวเลขดูเยอะ — แต่ความจริงคือ <strong>1 แถม 1 = ลด 50%</strong> เกือบทุกครั้ง ซึ่งคุ้มกว่า</p>
+
+    <p>บทความนี้จะสอนวิธีคำนวณโปรโมชั่นซูเปอร์มาร์เก็ตให้ถูกต้อง — เพื่อไม่ให้เสียเงินอีกต่อไปทุกครั้งที่ไปซื้อของ</p>
+
+    <h2>คณิตเบื้องหลัง "1 แถม 1"</h2>
+    <p>มาคำนวณกันแบบช้าๆ ด้วยตัวอย่างจริง:</p>
+    <ul>
+      <li>โค้ก 600ml ราคาปกติ <strong>20 บาท/ขวด</strong></li>
+      <li>ซื้อ 2 ขวด ปกติ = 20 × 2 = 40 บาท</li>
+      <li>โปร <em>1 แถม 1</em> = จ่าย 20 บาท ได้ 2 ขวด</li>
+    </ul>
+    <div class="calc">
+      ราคาต่อขวด (โปร) = 20 ÷ 2 = <strong>10 บาท/ขวด</strong><br>
+      เท่ากับลด = (20 − 10) ÷ 20 × 100 = <strong>50%</strong>
+    </div>
+    <p>ดังนั้น <strong>1 แถม 1 = ลด 50% เสมอ</strong> (สำหรับสินค้าชิ้นเดียวกัน)</p>
+
+    <h2>"2 แถม 1" ก็คล้ายกัน</h2>
+    <p>ลองคิดต่อ — "ซื้อ 2 ได้ 3":</p>
+    <ul>
+      <li>ขนมขนาดเดียวกัน ขวดละ 30 บาท</li>
+      <li>ซื้อ 2 ขวด = จ่าย 60 บาท ได้ <em>3 ขวด</em></li>
+    </ul>
+    <div class="calc">
+      ราคาต่อขวด (โปร) = 60 ÷ 3 = <strong>20 บาท/ขวด</strong><br>
+      ลด = (30 − 20) ÷ 30 × 100 = <strong>~33%</strong>
+    </div>
+    <p>2 แถม 1 = ลด 33% เสมอ (สำหรับสินค้าชิ้นเดียวกัน)</p>
+
+    <h2>ตารางสรุปโปรโมชั่นทั้งหมด</h2>
+    <p>จำเปอร์เซ็นต์เหล่านี้ไว้ใช้ในใจตอนช้อปได้เลย:</p>
+    <table>
+      <thead><tr><th>โปรโมชั่น</th><th>เท่ากับลด</th><th>จ่ายจริงต่อชิ้น</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1 แถม 1</strong></td><td>50%</td><td>50% ของปกติ</td></tr>
+        <tr><td>2 แถม 1</td><td>33%</td><td>67%</td></tr>
+        <tr><td>3 แถม 1</td><td>25%</td><td>75%</td></tr>
+        <tr><td>4 แถม 1</td><td>20%</td><td>80%</td></tr>
+        <tr><td>5 แถม 1</td><td>~17%</td><td>83%</td></tr>
+        <tr><td>ลด 10%</td><td>10%</td><td>90%</td></tr>
+        <tr><td>ลด 30%</td><td>30%</td><td>70%</td></tr>
+        <tr><td>ลด 50%</td><td>50%</td><td>= 1 แถม 1</td></tr>
+      </tbody>
+    </table>
+
+    <h2>แล้วเมื่อไหร่ "ลด 40%" ชนะ "1 แถม 1"?</h2>
+    <p>คำตอบสั้นๆ: <strong>เมื่อเป็นสินค้าคนละแบรนด์หรือคนละขนาด</strong></p>
+    <p>ตัวอย่างจริงในห้างไทย:</p>
+    <ul>
+      <li><strong>แบรนด์ A:</strong> 600ml ราคา 20 บาท + โปร <em>1 แถม 1</em></li>
+      <li><strong>แบรนด์ B:</strong> 1.5L (1,500ml) ราคา 35 บาท + <em>ลด 40%</em></li>
+    </ul>
+    <div class="calc">
+      <strong>แบรนด์ A:</strong><br>
+      โปร 1 แถม 1 = 10 บาท/ขวด → 10 ÷ 600ml = <strong>0.017 บาท/ml</strong><br><br>
+      <strong>แบรนด์ B:</strong><br>
+      ลด 40% = 35 × 0.6 = 21 บาท → 21 ÷ 1500ml = <strong>0.014 บาท/ml</strong>
+    </div>
+    <p>ในกรณีนี้ <strong>แบรนด์ B (ลด 40%) ชนะ</strong> เพราะต่อ ml ถูกกว่า แม้โปรไม่ดูดี</p>
+
+    <h2>3 จุดที่คนตกหลุมพรางบ่อย</h2>
+    <ol>
+      <li><strong>เห็น "ลด 50%" คิดว่า = 1 แถม 1</strong> — ถูกต้องแล้วถ้าเป็นสินค้าเดียวกัน ขนาดเดียวกัน</li>
+      <li><strong>เห็น "2 แถม 1" คิดว่าแบ่งครึ่ง</strong> — ผิด มันคือลด 33% ไม่ใช่ 50%</li>
+      <li><strong>เห็นแพคใหญ่ คิดว่าถูกกว่า</strong> — บางครั้งราคาต่อ ml แพงกว่าขวดเล็ก ต้องคำนวณ</li>
+    </ol>
+
+    <div class="cta">
+      <h3>ขี้เกียจคำนวณ?</h3>
+      <p style="margin-bottom:6px">ใช้ DealCheck — แค่ใส่ราคา + ปริมาณ เลือก promo type แอปคำนวณให้ทันที</p>
+      <a class="cta-btn" href="/">🔍 เปรียบราคาเลย</a>
+    </div>
+
+    <h2>สรุป (จำง่ายๆ)</h2>
+    <ul>
+      <li>✅ <strong>1 แถม 1</strong> = ลด 50% เสมอ</li>
+      <li>✅ <strong>2 แถม 1</strong> = ลด 33% เสมอ</li>
+      <li>✅ <strong>ลด %</strong> = ตามตัวเลข</li>
+      <li>⚠️ <strong>คนละแบรนด์ / คนละขนาด</strong> = ต้องคำนวณราคาต่อหน่วย (ml, g, ชิ้น)</li>
+      <li>💡 <strong>ใช้ DealCheck</strong> เมื่อตัดสินใจไม่ออกในร้าน</li>
+    </ul>
+
+    <p>ครั้งหน้าก่อนหยิบของลงตะกร้า — ใช้ DealCheck เปรียบ 30 วินาที ประหยัดได้ทุกครั้ง</p>
+  </article>
+
+  <div class="related">
+    <h2>บทความที่เกี่ยวข้อง</h2>
+    <a href="/blog/supermarket-tips">
+      <strong>7 เคล็ดลับช้อปซูเปอร์ให้คุ้ม</strong>
+      <span>นอกจากเปรียบราคา ยังมีกลยุทธ์อื่นที่ช่วยประหยัดได้อีกมาก</span>
+    </a>
+    <a href="/blog/pack-vs-bottle">
+      <strong>ทำไมแพคใหญ่บางครั้ง 'แพงกว่า' ขวดเล็ก?</strong>
+      <span>เปิดเผยกลยุทธ์ตั้งราคาของซูเปอร์มาร์เก็ตและวิธีจับให้ทัน</span>
+    </a>
+  </div>
+</div>
+</body>
+</html>

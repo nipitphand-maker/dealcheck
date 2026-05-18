@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>บล็อก DealCheck — เคล็ดลับช้อปซูเปอร์ + คณิตของโปรโมชั่น</title>
+<meta name="description" content="บทความเกี่ยวกับการเปรียบราคา โปรโมชั่นซูเปอร์มาร์เก็ต และเคล็ดลับการประหยัดเงินทุกครั้งที่ไปซื้อของ">
+<link rel="canonical" href="https://dealcheck-app.pages.dev/blog/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f472b6">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dealcheck-app.pages.dev/blog/">
+<meta property="og:title" content="บล็อก DealCheck — เคล็ดลับช้อปซูเปอร์">
+<meta property="og:description" content="บทความช่วยประหยัดเงินในซูเปอร์มาร์เก็ต">
+<meta property="og:image" content="https://dealcheck-app.pages.dev/og-image.jpg">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.7;padding:24px 16px 60px}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Sarabun:wght@400;600;700;800&display=swap');
+.wrap{max-width:720px;margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #f0d6eb}
+.logo{font-family:'Nunito',sans-serif;font-size:1.3rem;font-weight:900;letter-spacing:-1px;display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.logo .d{color:#f472b6}.logo .c{color:#2dd4bf}
+.logo img{width:32px;height:32px;border-radius:6px}
+.back{font-size:.85rem;color:#a07898;text-decoration:none;font-weight:700}
+.back:hover{color:#f472b6}
+h1{font-size:2rem;font-weight:900;margin-bottom:6px;color:#3d2645;letter-spacing:-1px;text-align:center}
+.intro{text-align:center;color:#a07898;margin-bottom:32px;font-size:1rem}
+.posts{display:flex;flex-direction:column;gap:18px}
+.post{background:#fff;border:2px solid #f0d6eb;border-radius:18px;padding:24px;text-decoration:none;color:inherit;display:block;transition:all .2s;box-shadow:0 3px 12px rgba(244,114,182,.05)}
+.post:hover{border-color:#f472b6;transform:translateY(-2px);box-shadow:0 6px 20px rgba(244,114,182,.15)}
+.post h2{font-size:1.2rem;font-weight:800;margin-bottom:6px;color:#3d2645;line-height:1.4}
+.post .meta{color:#a07898;font-size:.78rem;margin-bottom:10px;font-weight:600}
+.post p{font-size:.92rem;color:#3d2645;margin-bottom:10px}
+.post .tags{display:flex;gap:6px;flex-wrap:wrap}
+.post .tag{font-size:.72rem;padding:4px 10px;border-radius:99px;background:#fdf2f8;color:#a07898;font-weight:700}
+@media (min-width:768px){
+  h1{font-size:2.6rem}
+  .post h2{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/"><span><span class="d">Deal</span><span class="c">Check</span></span><img src="/icon-192.png" alt=""></a>
+    <a class="back" href="/">← กลับแอป</a>
+  </header>
+
+  <h1>📚 บล็อก DealCheck</h1>
+  <p class="intro">เคล็ดลับช้อปซูเปอร์ คณิตของโปรโมชั่น และวิธีประหยัดเงินทุกครั้งที่ไปซื้อของ</p>
+
+  <div class="posts">
+    <a class="post" href="/blog/bogo-vs-discount">
+      <h2>1 แถม 1 vs ลด 40% อันไหนคุ้มกว่า? (คำนวณให้เห็นเลย)</h2>
+      <p class="meta">18 พ.ค. 2026 · 4 นาที</p>
+      <p>เปรียบโปรโมชั่นในซูเปอร์แบบเข้าใจง่าย ตารางเปอร์เซ็นต์ลดของทุกโปร พร้อมตัวอย่างจริงและคณิตเบื้องหลัง</p>
+      <div class="tags"><span class="tag">โปรโมชั่น</span><span class="tag">คณิต</span><span class="tag">เริ่มต้น</span></div>
+    </a>
+
+    <a class="post" href="/blog/supermarket-tips">
+      <h2>7 เคล็ดลับช้อปซูเปอร์มาร์เก็ตให้คุ้มที่สุด</h2>
+      <p class="meta">18 พ.ค. 2026 · 5 นาที</p>
+      <p>รวมเทคนิคที่นักช้อปประหยัดใช้จริง ตั้งแต่อ่านป้ายราคา การวางสินค้า ไปจนถึงเวลาไปซูเปอร์ที่คุ้มสุด</p>
+      <div class="tags"><span class="tag">เคล็ดลับ</span><span class="tag">ประหยัด</span></div>
+    </a>
+
+    <a class="post" href="/blog/pack-vs-bottle">
+      <h2>ทำไมแพคใหญ่บางครั้ง 'แพงกว่า' ขวดเล็ก?</h2>
+      <p class="meta">18 พ.ค. 2026 · 4 นาที</p>
+      <p>เปิดกลยุทธ์การตั้งราคาของซูเปอร์ — แพคไม่ได้ถูกกว่าเสมอ มาดูเหตุผลและวิธีจับให้ทัน พร้อมตัวอย่างจริง 8 รายการ</p>
+      <div class="tags"><span class="tag">แพค</span><span class="tag">กลยุทธ์ตลาด</span></div>
+    </a>
+  </div>
+</div>
+</body>
+</html>
