@@ -86,6 +86,16 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
 .hbtn:hover{border-color:var(--pink)}
 
 /* ad */
+/* ── iOS install modal ── */
+.ios-modal{position:fixed;inset:0;background:rgba(61,38,69,.55);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
+.ios-modal.show{display:flex}
+.ios-modal-content{background:#fff;border-radius:18px;padding:22px 20px;max-width:340px;width:100%;text-align:left;box-shadow:0 12px 40px rgba(244,114,182,.3);animation:fu .25s ease both}
+.ios-modal-content h3{margin-bottom:14px;font-size:1.05rem;font-weight:800;color:#3d2645}
+.ios-modal-content ol{padding-left:24px;margin-bottom:14px}
+.ios-modal-content li{margin-bottom:10px;font-size:.88rem;line-height:1.6}
+.ibtn{font-size:.95rem!important;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08);box-shadow:0 0 0 6px rgba(244,114,182,.18)}}
+
 .ad,.ad-mid{max-width:100%;overflow:hidden;max-height:120px}
 .ad{background:#fff5fb;border:1px dashed #f0c0e0;border-radius:var(--rs);padding:7px;text-align:center;color:var(--sub);font-size:.68rem;margin-bottom:10px;opacity:.8}
 .adsbygoogle{max-width:100%!important;max-height:100px!important;display:block}
@@ -344,6 +354,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
         <button class="fbtn fplus" onclick="adjFont(1)" title="เพิ่มขนาด">A+</button>
       </div>
       <button class="hbtn" onclick="openH()" title="ประวัติ">📋</button>
+      <button class="hbtn ibtn" id="installBtn" onclick="installPWA()" title="ติดตั้งเป็นแอป" style="display:none">📲</button>
     </div>
   </header>
 
@@ -407,6 +418,20 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
       <button class="clr-btn" onclick="clearHist()" id="clrBtn">ล้างทั้งหมด</button>
     </div>
     <div id="histList"></div>
+  </div>
+</div>
+
+<!-- iOS install instructions modal -->
+<div class="ios-modal" id="iosInstallModal" onclick="closeIosModal()">
+  <div class="ios-modal-content" onclick="event.stopPropagation()">
+    <h3>📲 ติดตั้ง DealCheck บน iPhone</h3>
+    <ol>
+      <li>กดปุ่ม <strong>Share</strong> <span style="font-size:1.2em">⬆️</span> ที่ด้านล่างของ Safari</li>
+      <li>เลื่อนลง → กด <strong>"Add to Home Screen"</strong></li>
+      <li>กด <strong>Add</strong> มุมขวาบน</li>
+    </ol>
+    <p style="font-size:.8rem;color:#a07898;margin-bottom:14px">หลังติดตั้งแล้ว แอปจะเปิดได้จาก home screen เหมือนแอปจริง — ใช้ได้แม้ไม่มี internet</p>
+    <button class="cta-btn" onclick="closeIosModal()" style="width:100%">เข้าใจแล้ว</button>
   </div>
 </div>
 
@@ -873,6 +898,45 @@ function showToast(msg){
   t.textContent=msg; t.classList.add('on');
   setTimeout(()=>t.classList.remove('on'),2200);
 }
+// ── PWA INSTALL ──
+let deferredPrompt = null;
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+function showInstallBtn(){
+  if(isStandalone) return;
+  const b = document.getElementById('installBtn');
+  if(b) b.style.display = 'flex';
+}
+function installPWA(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(()=>{
+      deferredPrompt = null;
+      const b = document.getElementById('installBtn');
+      if(b) b.style.display = 'none';
+    });
+  } else if(isIOS){
+    document.getElementById('iosInstallModal').classList.add('show');
+  }
+}
+function closeIosModal(){
+  document.getElementById('iosInstallModal').classList.remove('show');
+}
+window.addEventListener('beforeinstallprompt', (e)=>{
+  e.preventDefault();
+  deferredPrompt = e;
+  showInstallBtn();
+});
+window.addEventListener('appinstalled', ()=>{
+  const b = document.getElementById('installBtn');
+  if(b) b.style.display = 'none';
+});
+// iOS Safari doesn't fire beforeinstallprompt — show button anyway
+if(isIOS && !isStandalone){
+  setTimeout(showInstallBtn, 800);
+}
+
 // ── SERVICE WORKER (PWA) ──
 if('serviceWorker' in navigator){
   window.addEventListener('load', ()=>{
