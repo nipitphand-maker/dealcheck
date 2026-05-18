@@ -1,0 +1,35 @@
+{
+  "name": "DealCheck — อันไหนคุ้มกว่า?",
+  "short_name": "DealCheck",
+  "description": "เปรียบราคาของในซูเปอร์มาร์เก็ต รองรับโปรโมชั่น 1แถม1 ลด% คำนวณราคาต่อหน่วยให้อัตโนมัติ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fef6fb",
+  "theme_color": "#f472b6",
+  "orientation": "portrait",
+  "lang": "th",
+  "categories": ["utilities", "shopping"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "เปรียบราคาของสองชิ้น"
+    }
+  ]
+}

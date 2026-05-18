@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealCheck — Compare prices, find the best deal? Free, no app</title>
+<meta name="description" content="Compare supermarket prices instantly. Supports % off, Buy 1 Get 1, Buy 2 Get 1, and pack pricing. Auto unit-price calculation. Free, no app download.">
+<meta name="keywords" content="price comparison,unit price,best deal,buy one get one,bogo,grocery price calculator,supermarket savings,promotion calculator">
+<link rel="canonical" href="https://dealcheck.pages.dev/en/landing.html">
+<link rel="alternate" hreflang="th" href="https://dealcheck.pages.dev/landing.html">
+<link rel="alternate" hreflang="en" href="https://dealcheck.pages.dev/en/landing.html">
+<link rel="alternate" hreflang="x-default" href="https://dealcheck.pages.dev/landing.html">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f472b6">
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dealcheck.pages.dev/en/landing.html">
+<meta property="og:title" content="DealCheck — Which deal is the best?">
+<meta property="og:description" content="Compare supermarket prices instantly. Supports BOGO and % off promos. Free, no app download.">
+<meta property="og:image" content="https://dealcheck.pages.dev/og-image.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Structured Data — WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DealCheck",
+  "description": "Compare supermarket prices, calculate unit prices, supports BOGO and % off promotions",
+  "url": "https://dealcheck.pages.dev",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "inLanguage": ["en", "th"],
+  "featureList": [
+    "Unit price comparison",
+    "Supports Buy 1 Get 1, Buy 2 Get 1, % off promotions",
+    "Compare multiple items at once",
+    "Works offline",
+    "Free, no fullscreen ads"
+  ]
+}
+</script>
+
+<!-- Structured Data — FAQPage (great for SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if a Buy 1 Get 1 promo beats buying two smaller items?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use DealCheck to compare unit prices instantly. Enter the price and quantity of each item, pick the promo, and the app tells you which one is cheaper per ml or g."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better: 40% off or Buy 1 Get 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buy 1 Get 1 equals a 50% discount, so for the same product BOGO always beats 40% off. But for different brands or sizes you need to compare unit prices — DealCheck does it for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I compare items of different sizes, like 250ml vs 1 liter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the price and quantity of each size, pick the right unit (ml or L), and DealCheck converts units and calculates price per ml so you can compare instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A 6-pack of Coke at $5 vs a 1.25L bottle at $1.20 — which is cheaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use DealCheck pack mode: enter 6 cans × 325ml at $5 versus a 1250ml bottle at $1.20. The app calculates the price per ml for both instantly."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.7}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Sarabun:wght@400;600;700&display=swap');
+
+.hero{background:linear-gradient(135deg,#fdf2f8,#f0fdf4);padding:60px 20px;text-align:center;border-bottom:1px solid #f0d6eb}
+.logo{font-family:'Nunito',sans-serif;font-size:3rem;font-weight:900;letter-spacing:-2px}
+.logo .d{color:#f472b6}.logo .c{color:#2dd4bf}
+h1{font-size:1.6rem;font-weight:800;margin:16px 0 8px;color:#3d2645}
+.sub{font-size:1rem;color:#a07898;max-width:480px;margin:0 auto 28px}
+.cta-btn{
+  display:inline-block;padding:16px 40px;
+  background:linear-gradient(135deg,#f472b6,#fb7185);
+  color:#fff;font-size:1.1rem;font-weight:900;
+  border-radius:99px;text-decoration:none;
+  box-shadow:0 6px 20px rgba(244,114,182,.4);
+  transition:transform .2s,box-shadow .2s;
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(244,114,182,.5)}
+
+.lang-switch{position:absolute;top:16px;right:16px;display:flex;gap:6px}
+.lang-switch a{padding:4px 10px;border-radius:99px;background:#fff;border:2px solid #f0d6eb;font-size:.8rem;text-decoration:none;color:#a07898;font-weight:700}
+.lang-switch a.on{background:#3d2645;color:#fff;border-color:#3d2645}
+
+.features{max-width:600px;margin:0 auto;padding:48px 20px}
+h2{font-size:1.3rem;font-weight:800;margin-bottom:20px;color:#3d2645}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:40px}
+@media(max-width:480px){.feat-grid{grid-template-columns:1fr}}
+.feat{background:#fff;border:2px solid #f0d6eb;border-radius:16px;padding:18px;box-shadow:0 3px 12px rgba(244,114,182,.05)}
+.feat-icon{font-size:1.6rem;margin-bottom:8px}
+.feat h3{font-size:.95rem;font-weight:800;margin-bottom:4px}
+.feat p{font-size:.82rem;color:#a07898}
+
+.how{background:#fff;border-radius:20px;border:2px solid #f0d6eb;padding:28px;margin-bottom:40px}
+.step{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+.step:last-child{margin-bottom:0}
+.step-num{width:28px;height:28px;border-radius:50%;background:#f472b6;color:#fff;font-weight:900;font-size:.82rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-text h3{font-size:.95rem;font-weight:800;margin-bottom:2px}
+.step-text p{font-size:.82rem;color:#a07898}
+
+.faq{margin-bottom:40px}
+.faq-item{background:#fff;border:2px solid #f0d6eb;border-radius:14px;padding:18px;margin-bottom:10px}
+.faq-item h3{font-size:.92rem;font-weight:800;margin-bottom:6px;color:#3d2645}
+.faq-item p{font-size:.82rem;color:#a07898}
+
+footer{text-align:center;padding:20px;font-size:.75rem;color:#d0b0c8;border-top:1px solid #f0d6eb}
+
+.use-now{text-align:center;background:linear-gradient(135deg,#fdf2f8,#f0fdf4);padding:40px 20px;border-top:1px solid #f0d6eb}
+.use-now h2{margin-bottom:16px}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero" style="position:relative">
+  <div class="lang-switch">
+    <a href="/landing.html" aria-label="ภาษาไทย">🇹🇭 TH</a>
+    <a href="/en/landing.html" class="on" aria-label="English">🇬🇧 EN</a>
+  </div>
+  <div class="logo"><span class="d">Deal</span><span class="c">Check</span> 🛒</div>
+  <h1>Which deal is the best?</h1>
+  <p class="sub">Auto unit-price calculation. Supports Buy 1 Get 1, % off, and pack pricing. Free, no app download required.</p>
+  <a class="cta-btn" href="/en/">🔍 Start Comparing!</a>
+</div>
+
+<div class="features">
+
+  <!-- Features -->
+  <h2>What can it do?</h2>
+  <div class="feat-grid">
+    <div class="feat">
+      <div class="feat-icon">⚖️</div>
+      <h3>Unit price comparison</h3>
+      <p>Calculates price per ml, g, or piece — easily compare different sizes</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🎁</div>
+      <h3>Promo-aware</h3>
+      <p>Buy 1 Get 1, Buy 2 Get 1, % off, or custom — calculates the real price automatically</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📦</div>
+      <h3>Pack mode</h3>
+      <p>6-pack of Coke × 325ml? Enter it as-is, no manual math needed</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📊</div>
+      <h3>Compare up to 5</h3>
+      <p>Compare up to 5 items at once, ranked from best deal to worst</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📋</div>
+      <h3>History saved</h3>
+      <p>Remembers your last 10 comparisons — no need to re-enter</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📤</div>
+      <h3>Share with friends</h3>
+      <p>Share comparison results via your favorite chat apps or copy as text</p>
+    </div>
+  </div>
+
+  <!-- How to use -->
+  <h2>How to use</h2>
+  <div class="how">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h3>Enter the price and quantity of each item</h3>
+        <p>Supports ml, L, g, kg, or pieces — pick what fits</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h3>Pick a promotion (if any)</h3>
+        <p>% off, BOGO, Buy 2 Get 1, or custom — the app adjusts the real price</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h3>Tap Compare!</h3>
+        <p>Get instant results showing which is the best deal and by how many percent</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ — great for SEO -->
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Which is better: Buy 1 Get 1 or 40% off?</h3>
+      <p>Buy 1 Get 1 equals a 50% discount, so for the same product BOGO always wins. But for different brands or sizes, use DealCheck to compare unit prices.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I compare items of different sizes, like 250ml vs 1 liter?</h3>
+      <p>Enter the price and quantity separately, pick the right unit (ml or L), and DealCheck converts and calculates price per ml so you can compare instantly.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What about multi-packs like a 6-can pack — do I need to do math first?</h3>
+      <p>No. Switch on pack mode, enter 6 × 325ml, and the app calculates the total volume for you, then compares it to other items.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does it work on iPhone and Android?</h3>
+      <p>Yes — works in any browser (Safari, Chrome, etc.). No app download required. You can also "Add to Home Screen" to use it like a native app.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Use now CTA -->
+<div class="use-now">
+  <h2>Start comparing — free!</h2>
+  <a class="cta-btn" href="/en/">🛒 Use DealCheck</a>
+</div>
+
+<footer>
+  DealCheck · No personal data collected · Free forever<br>
+  <a href="/en/" style="color:#f472b6;text-decoration:none">Open App</a>
+</footer>
+
+</body>
+</html>

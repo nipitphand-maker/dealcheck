@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844">
+  <rect width="390" height="844" fill="#fef6fb"/>
+  <rect x="0" y="0" width="390" height="80" fill="#fff" stroke="#f0d6eb" stroke-width="1"/>
+  <text x="195" y="50" text-anchor="middle"
+        font-family="'Helvetica Neue',Arial,sans-serif"
+        font-weight="900" font-size="28" letter-spacing="-1">
+    <tspan fill="#f472b6">Deal</tspan><tspan fill="#2dd4bf">Check</tspan><tspan font-size="22"> 🛒</tspan>
+  </text>
+
+  <!-- card 1 winner -->
+  <rect x="16" y="100" width="358" height="170" rx="16" fill="#fff" stroke="#10b981" stroke-width="3"/>
+  <rect x="16" y="100" width="80" height="32" rx="8" fill="#10b981"/>
+  <text x="56" y="122" text-anchor="middle" font-family="Arial" font-weight="800" font-size="16" fill="#fff">คุ้มสุด</text>
+  <text x="28" y="170" font-family="Arial" font-weight="800" font-size="20" fill="#3d2645">โค้ก 1.25L</text>
+  <text x="28" y="200" font-family="Arial" font-weight="600" font-size="16" fill="#a07898">35 ฿ / 1,250 ml</text>
+  <text x="28" y="240" font-family="Arial" font-weight="900" font-size="32" fill="#10b981">0.028 ฿/ml</text>
+
+  <!-- card 2 -->
+  <rect x="16" y="290" width="358" height="170" rx="16" fill="#fff" stroke="#f0d6eb" stroke-width="2"/>
+  <text x="28" y="330" font-family="Arial" font-weight="800" font-size="20" fill="#3d2645">โค้กแพค 6 × 325ml</text>
+  <text x="28" y="360" font-family="Arial" font-weight="600" font-size="16" fill="#a07898">150 ฿ / 1,950 ml</text>
+  <text x="28" y="400" font-family="Arial" font-weight="900" font-size="32" fill="#a07898">0.077 ฿/ml</text>
+  <text x="28" y="435" font-family="Arial" font-weight="600" font-size="14" fill="#fb7185">แพงกว่า 2.7 เท่า</text>
+
+  <!-- compare button -->
+  <rect x="40" y="500" width="310" height="60" rx="30" fill="#f472b6"/>
+  <text x="195" y="540" text-anchor="middle" font-family="Arial" font-weight="900" font-size="22" fill="#fff">+ เปรียบเพิ่ม</text>
+
+  <!-- promotion examples -->
+  <text x="28" y="610" font-family="Arial" font-weight="800" font-size="18" fill="#3d2645">โปรโมชั่นที่รองรับ</text>
+  <rect x="28" y="625" width="100" height="36" rx="18" fill="#fef3c7"/>
+  <text x="78" y="649" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#92400e">1 แถม 1</text>
+  <rect x="140" y="625" width="100" height="36" rx="18" fill="#dbeafe"/>
+  <text x="190" y="649" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#1e40af">ลด 40%</text>
+  <rect x="252" y="625" width="100" height="36" rx="18" fill="#fce7f3"/>
+  <text x="302" y="649" text-anchor="middle" font-family="Arial" font-weight="700" font-size="15" fill="#9d174d">2 แถม 1</text>
+
+  <text x="195" y="760" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#a07898">ใช้ฟรี · ไม่ต้องโหลด · ไม่เก็บข้อมูล</text>
+</svg>
