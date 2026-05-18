@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dealcheck.pages.dev/sitemap.xml
+Sitemap: https://dealcheck-app.pages.dev/sitemap.xml
