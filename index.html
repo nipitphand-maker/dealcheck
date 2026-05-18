@@ -316,6 +316,9 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .bar-promo{font-size:.62rem;font-weight:700;margin-top:1px}
 
 .act-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.new-cmp-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 20px;background:linear-gradient(135deg,var(--pink),var(--teal));color:#fff;border:none;border-radius:14px;font-family:inherit;font-weight:900;font-size:1rem;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 14px rgba(244,114,182,.25);transition:transform .15s,box-shadow .15s}
+.new-cmp-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(244,114,182,.35)}
+.new-cmp-btn:active{transform:translateY(0)}
 .act-btn{padding:10px;border-radius:var(--rs);border:2px solid var(--border);background:var(--surface);color:var(--sub);font-size:.8rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .18s;display:flex;align-items:center;justify-content:center;gap:5px}
 .act-btn:hover{border-color:var(--text);color:var(--text)}
 .act-btn.pk{border-color:var(--pink);color:var(--pink)}
@@ -469,6 +472,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
     </div>
     -->
 
+    <button class="new-cmp-btn" onclick="newComparison()">🔄 <span id="newCmpTxt">เปรียบใหม่</span></button>
     <div class="act-row">
       <button class="act-btn pk" onclick="shareResult()">📤 <span id="shareTxt">แชร์</span></button>
       <button class="act-btn" onclick="openH()">📋 <span id="histTxt">ประวัติ</span></button>
@@ -576,7 +580,7 @@ const T = {
     winBadge:'🏆 คุ้มที่สุด', tieBadge:'🤝 เท่ากัน',
     tieMsg:'ราคาต่อหน่วยเท่ากัน!',
     cheapBy:p=>`ถูกกว่า <strong>${p}%</strong>`,
-    share:'แชร์', hist:'ประวัติ',
+    share:'แชร์', hist:'ประวัติ', newCmp:'เปรียบใหม่',
     dTitle:'📋 ประวัติ', clrBtn:'ล้างทั้งหมด',
     emptyH:'ยังไม่มีประวัติ',
     pLbl:'ราคา', aLbl:'ปริมาณ', promoLbl:'โปรโมชั่น',
@@ -596,7 +600,7 @@ const T = {
     winBadge:'🏆 Best Deal', tieBadge:'🤝 Tie',
     tieMsg:'Same unit price!',
     cheapBy:p=>`<strong>${p}% cheaper</strong>`,
-    share:'Share', hist:'History',
+    share:'Share', hist:'History', newCmp:'Compare new',
     dTitle:'📋 History', clrBtn:'Clear all',
     emptyH:'No history yet',
     pLbl:'Price', aLbl:'Amount', promoLbl:'Promotion',
@@ -635,7 +639,7 @@ function setLang(l){
 }
 function applyLang(){
   const t=T[lang];
-  qi('addTxt',t.addTxt); qi('ctaTxt',t.cta); qi('backTxt',t.back);
+  qi('addTxt',t.addTxt); qi('ctaTxt',t.cta); qi('backTxt',t.back); qi('newCmpTxt',t.newCmp);
   qi('shareTxt',t.share); qi('histTxt',t.hist); qi('dTitle',t.dTitle); qi('clrBtn',t.clrBtn);
   document.querySelectorAll('.card[data-idx]').forEach(c=>refreshCardLang(c));
   renderHist();
@@ -970,6 +974,29 @@ function showView(v){
 }
 function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 function goBack(){showView('form');}
+
+function newComparison(){
+  // Reset all cards to empty state — fresh start
+  document.querySelectorAll('.card[data-idx]').forEach(card=>{
+    const nameEl=card.querySelector('[data-name]'); if(nameEl) nameEl.value='';
+    const priceEl=card.querySelector('[data-price]'); if(priceEl) priceEl.value='';
+    card.querySelectorAll('[data-amt]').forEach(i=>i.value='');
+    card.querySelectorAll('[data-pack-qty],[data-pack-uvol]').forEach(i=>i.value='');
+    card.querySelectorAll('[data-disc],[data-buy],[data-get]').forEach(i=>i.value='');
+    const pack=card.querySelector('[data-pack]'); if(pack){ pack.checked=false; }
+    const promoSel=card.querySelector('.promo-sel');
+    if(promoSel){ promoSel.value='none'; promoSel.dispatchEvent(new Event('change')); }
+    // remove .win highlight
+    card.classList.remove('win');
+    // refresh live state
+    liveUpdate(card.id);
+  });
+  // Remove extra items (3rd, 4th, 5th cards) — keep just A + B
+  document.querySelectorAll('#extraList .card[data-idx]').forEach(c=>c.remove());
+  itemCount = 2;
+  lastResult = null;
+  showView('form');
+}
 
 // ── FORMAT ──
 function fmt(n){return n<1?n.toFixed(3):n.toFixed(2);}
