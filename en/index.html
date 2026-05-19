@@ -51,10 +51,16 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if a Buy 1 Get 1 promo beats buying two smaller items?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck to compare unit prices instantly. Enter the price and quantity of each item, pick the promo, and the app tells you which one is cheaper per ml or g."}},{"@type":"Question","name":"Which is better: 40% off or Buy 1 Get 1?","acceptedAnswer":{"@type":"Answer","text":"Buy 1 Get 1 equals a 50% discount, so for the same product BOGO always beats 40% off. But for different brands or sizes you need to compare unit prices — DealCheck does it for you."}},{"@type":"Question","name":"How do I compare items of different sizes, like 250ml vs 1 liter?","acceptedAnswer":{"@type":"Answer","text":"Enter the price and quantity of each size, pick the right unit (ml or L), and DealCheck converts units and calculates price per ml so you can compare instantly."}},{"@type":"Question","name":"A 6-pack of Coke at $5 vs a 1.25L bottle at $1.20 — which is cheaper?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck pack mode: enter 6 cans × 325ml at $5 versus a 1250ml bottle at $1.20. The app calculates the price per ml for both instantly."}}]}
 </script>
 
-<!-- AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
+<!-- Preconnect to critical origins (saves DNS+TLS) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Preload LCP candidate (logo) -->
+<link rel="preload" as="image" href="/icon-192.png" fetchpriority="high">
+
+<!-- Fonts (dropped unused weight 600) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #fef6fb;
@@ -83,6 +89,7 @@ body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--
 .o2{width:220px;height:220px;background:#a1f4c8;bottom:-30px;right:-30px;animation-delay:5s}
 .o3{width:150px;height:150px;background:#c7b8f5;top:50%;left:55%;animation-delay:10s}
 @keyframes fl{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,12px)}}
+@media (max-width:768px),(prefers-reduced-motion:reduce){.orbs{display:none}}
 
 .wrap{max-width:480px;margin:0 auto;padding:14px 12px 6px;position:relative;z-index:1}
 
@@ -112,7 +119,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .adsbygoogle{max-width:100%!important;max-height:60px!important;display:block;min-height:50px}
 
 /* ── COMPARE GRID ── */
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;min-height:380px}
 
 .card{
   background:var(--surface);
@@ -417,7 +424,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 
 <div class="wrap" id="mainWrap">
   <header>
-    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="/icon-192.png" alt="" class="logo-icon"></div>
+    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="/icon-192.png" alt="" class="logo-icon" width="34" height="34" decoding="async" fetchpriority="high"></div>
     <div class="hrow">
       <a class="lbtn" href="/" aria-label="ภาษาไทย">TH</a>
       <a class="lbtn on" href="/en/" aria-label="English">EN</a>
@@ -1120,5 +1127,8 @@ if('serviceWorker' in navigator){
   });
 }
 </script>
+
+<!-- AdSense loader — moved to end of body so it doesn't compete with LCP -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
 </body>
 </html>

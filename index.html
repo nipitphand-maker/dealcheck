@@ -50,10 +50,16 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"จะรู้ได้ยังไงว่าโปรโมชั่น 1 แถม 1 คุ้มกว่าซื้อชิ้นเล็กสองชิ้น?","acceptedAnswer":{"@type":"Answer","text":"ใช้ DealCheck เปรียบราคาต่อหน่วยได้เลย ใส่ราคาและปริมาณของแต่ละชิ้น เลือกโปรโมชั่นที่ใช้ แล้วแอปจะคำนวณให้ทันทีว่าอันไหนถูกกว่าต่อ ml หรือ g"}},{"@type":"Question","name":"ลด 40% กับ 1 แถม 1 อันไหนคุ้มกว่า?","acceptedAnswer":{"@type":"Answer","text":"1 แถม 1 เท่ากับลด 50% ดังนั้นถ้าสินค้าเดียวกัน 1 แถม 1 คุ้มกว่าลด 40% เสมอ แต่ถ้าต่างยี่ห้อหรือต่างขนาด ต้องคำนวณราคาต่อหน่วย ใช้ DealCheck ช่วยได้เลย"}},{"@type":"Question","name":"วิธีเปรียบราคาของที่มีขนาดต่างกัน เช่น 250ml กับ 1 ลิตร?","acceptedAnswer":{"@type":"Answer","text":"ใส่ราคาและปริมาณของแต่ละขนาดใน DealCheck เลือกหน่วยให้ถูกต้อง (ml หรือ L) แล้วแอปจะแปลงหน่วยและคำนวณราคาต่อ ml ให้เปรียบได้ทันที"}},{"@type":"Question","name":"โค้ก 6 กระป๋อง แพคละ 150 บาท กับขวด 1.25 ลิตร 35 บาท อันไหนถูกกว่า?","acceptedAnswer":{"@type":"Answer","text":"ใช้ DealCheck เปิดโหมดแพค ใส่ว่า 6 กระป๋อง × 325ml ราคา 150 บาท เทียบกับขวด 1250ml ราคา 35 บาท แอปจะคำนวณราคาต่อ ml ให้ทันที"}}]}
 </script>
 
-<!-- AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
+<!-- Preconnect to critical origins (saves DNS+TLS) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Preload LCP candidate (logo) -->
+<link rel="preload" as="image" href="icon-192.png" fetchpriority="high">
+
+<!-- Fonts (dropped unused weight 600) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #fef6fb;
@@ -82,6 +88,7 @@ body{font-family:'Sarabun','Nunito',sans-serif;background:var(--bg);color:var(--
 .o2{width:220px;height:220px;background:#a1f4c8;bottom:-30px;right:-30px;animation-delay:5s}
 .o3{width:150px;height:150px;background:#c7b8f5;top:50%;left:55%;animation-delay:10s}
 @keyframes fl{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,12px)}}
+@media (max-width:768px),(prefers-reduced-motion:reduce){.orbs{display:none}}
 
 .wrap{max-width:480px;margin:0 auto;padding:14px 12px 6px;position:relative;z-index:1}
 
@@ -112,7 +119,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .adsbygoogle{max-width:100%!important;max-height:80px!important;display:block;min-height:60px}
 
 /* ── COMPARE GRID ── */
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;min-height:380px}
 
 .card{
   background:var(--surface);
@@ -417,7 +424,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 
 <div class="wrap" id="mainWrap">
   <header>
-    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="icon-192.png" alt="" class="logo-icon"></div>
+    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="icon-192.png" alt="" class="logo-icon" width="34" height="34" decoding="async" fetchpriority="high"></div>
     <div class="hrow">
       <a class="lbtn on" href="/" aria-label="ภาษาไทย">TH</a>
       <a class="lbtn" href="/en/" aria-label="English">EN</a>
@@ -1125,5 +1132,8 @@ if('serviceWorker' in navigator){
   });
 }
 </script>
+
+<!-- AdSense loader — moved to end of body so it doesn't compete with LCP -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049269744581719" crossorigin="anonymous"></script>
 </body>
 </html>
