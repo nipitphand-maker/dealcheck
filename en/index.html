@@ -51,16 +51,17 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if a Buy 1 Get 1 promo beats buying two smaller items?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck to compare unit prices instantly. Enter the price and quantity of each item, pick the promo, and the app tells you which one is cheaper per ml or g."}},{"@type":"Question","name":"Which is better: 40% off or Buy 1 Get 1?","acceptedAnswer":{"@type":"Answer","text":"Buy 1 Get 1 equals a 50% discount, so for the same product BOGO always beats 40% off. But for different brands or sizes you need to compare unit prices — DealCheck does it for you."}},{"@type":"Question","name":"How do I compare items of different sizes, like 250ml vs 1 liter?","acceptedAnswer":{"@type":"Answer","text":"Enter the price and quantity of each size, pick the right unit (ml or L), and DealCheck converts units and calculates price per ml so you can compare instantly."}},{"@type":"Question","name":"A 6-pack of Coke at $5 vs a 1.25L bottle at $1.20 — which is cheaper?","acceptedAnswer":{"@type":"Answer","text":"Use DealCheck pack mode: enter 6 cans × 325ml at $5 versus a 1250ml bottle at $1.20. The app calculates the price per ml for both instantly."}}]}
 </script>
 
-<!-- Preconnect to critical origins (saves DNS+TLS) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Preconnect to AdSense (fonts now self-hosted, no external font CDN needed) -->
 <link rel="preconnect" href="https://pagead2.googlesyndication.com">
 
-<!-- Preload LCP candidate (logo) -->
-<link rel="preload" as="image" href="/icon-192.png" fetchpriority="high">
+<!-- Preload LCP candidate (logo, WebP 694B) -->
+<link rel="preload" as="image" href="/logo-68.webp" type="image/webp" fetchpriority="high">
 
-<!-- Fonts (dropped unused weight 600) -->
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;700;800&display=swap" rel="stylesheet">
+<!-- Preload critical Latin body font (EN uses latin only) -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/sarabun-400-latin.woff2" crossorigin>
+
+<!-- Self-hosted fonts (was Google Fonts; cuts 1 round-trip + ~200KB unused subsets) -->
+<link href="/fonts/fonts.css" rel="stylesheet">
 <style>
 :root {
   --bg: #fef6fb;
@@ -136,8 +137,6 @@ header{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bott
 .card-label{display:flex;align-items:center;gap:6px;margin-bottom:10px}
 .dot{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;color:#fff;flex-shrink:0}
 .card-letter{font-size:.95rem;font-weight:900}
-
-
 
 /* promo selector — clean dropdown */
 .promo-row{margin-bottom:8px}
@@ -424,7 +423,7 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
 
 <div class="wrap" id="mainWrap">
   <header>
-    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><img src="/icon-192.png" alt="" class="logo-icon" width="34" height="34" decoding="async" fetchpriority="high"></div>
+    <div class="logo"><span class="d">Deal</span><span class="c">Check</span><picture><source srcset="/logo-68.webp" type="image/webp"><img src="/logo-68.png" alt="" class="logo-icon" width="34" height="34" decoding="async" fetchpriority="high"></picture></div>
     <div class="hrow">
       <a class="lbtn" href="/" aria-label="ภาษาไทย">TH</a>
       <a class="lbtn on" href="/en/" aria-label="English">EN</a>
@@ -449,7 +448,6 @@ footer{text-align:center;font-size:.65rem;color:#d0b0c8;padding:6px 0 2px}
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
   -->
-
 
   <!-- ── FORM VIEW ── -->
   <div class="view on" id="vForm">
@@ -1097,8 +1095,9 @@ if(isIOS && !isStandalone){
 }
 
 // ── SERVICE WORKER + AUTO-UPDATE ──
+// Register on idle (or load) so SW install doesn't compete with LCP/critical work
 if('serviceWorker' in navigator){
-  window.addEventListener('load', ()=>{
+  const swRegister = ()=>{
     navigator.serviceWorker.register('/sw.js').then(reg=>{
       // Check for updates immediately + every 30 min
       reg.update();
@@ -1116,7 +1115,12 @@ if('serviceWorker' in navigator){
         });
       });
     }).catch(()=>{});
-  });
+  };
+  if('requestIdleCallback' in window){
+    requestIdleCallback(swRegister, {timeout: 4000});
+  } else {
+    window.addEventListener('load', swRegister);
+  }
 
   // Reload page when new SW takes control (e.g., after manual update)
   let refreshing = false;

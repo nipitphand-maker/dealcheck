@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v13';
+const CACHE = 'dealcheck-v14';
 const ASSETS = [
   '/',
   '/index.html',
@@ -15,7 +15,17 @@ const ASSETS = [
   '/favicon-32.png',
   '/icon-192.png',
   '/apple-touch-icon.png',
-  'https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Sarabun:wght@400;600;700;800&display=swap'
+  '/logo-68.webp',
+  '/logo-68.png',
+  '/fonts/fonts.css',
+  '/fonts/sarabun-400-thai.woff2',
+  '/fonts/sarabun-400-latin.woff2',
+  '/fonts/sarabun-700-thai.woff2',
+  '/fonts/sarabun-700-latin.woff2',
+  '/fonts/sarabun-800-thai.woff2',
+  '/fonts/sarabun-800-latin.woff2',
+  '/fonts/nunito-700-latin.woff2',
+  '/fonts/nunito-900-latin.woff2'
 ];
 
 // Install — pre-cache core assets
