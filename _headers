@@ -48,6 +48,12 @@
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
 
+# Bare directory URLs (served as index.html but don't match /*.html pattern)
+/
+  Cache-Control: public, max-age=300, must-revalidate
+/en/
+  Cache-Control: public, max-age=300, must-revalidate
+
 # Security headers (no perf cost, baseline hardening)
 /*
   X-Content-Type-Options: nosniff
