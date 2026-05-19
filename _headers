@@ -1,0 +1,55 @@
+# Cloudflare Pages cache rules — repeat-visit performance
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+
+# Fonts (woff2 + fonts.css) — long cache, immutable byte content
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Logo + icons (rename file if updating to bust cache)
+/logo-68.webp
+  Cache-Control: public, max-age=31536000, immutable
+/logo-68.png
+  Cache-Control: public, max-age=31536000, immutable
+/icon-192.png
+  Cache-Control: public, max-age=31536000, immutable
+/icon-512.png
+  Cache-Control: public, max-age=31536000, immutable
+/apple-touch-icon.png
+  Cache-Control: public, max-age=31536000, immutable
+/favicon-32.png
+  Cache-Control: public, max-age=31536000, immutable
+/og-image.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+# OG image HTML generator — never cache (used for screenshots)
+/og-image.html
+  Cache-Control: no-store
+
+# Service worker — must always be fresh so updates propagate immediately
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Manifest — moderate cache
+/manifest.json
+  Cache-Control: public, max-age=3600
+/en/manifest.json
+  Cache-Control: public, max-age=3600
+
+# robots/sitemap — moderate cache
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/ads.txt
+  Cache-Control: public, max-age=3600
+
+# HTML pages — short cache, must-revalidate so deploys propagate fast
+# (SW handles offline; CF edge still caches at edge tier for instant TTFB)
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Security headers (no perf cost, baseline hardening)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=()
