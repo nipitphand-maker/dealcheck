@@ -54,10 +54,15 @@
 /en/
   Cache-Control: public, max-age=300, must-revalidate
 
+# App JS modules — versioned via sw.js cache; medium cache OK
+/src/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
 # Security headers (no perf cost, baseline hardening)
 /*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=(), payment=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; connect-src 'self'; object-src 'none'; base-uri 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; connect-src 'self'; object-src 'none'; base-uri 'self'
