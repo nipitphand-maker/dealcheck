@@ -625,7 +625,7 @@ document.querySelector('[data-action="closeIos"]')?.addEventListener('click', cl
 addItem(); addItem();
 renderHist();
 
-if ('caches' in window) {
+function showVer() {
   caches.keys().then(keys => {
     const ver = keys.find(k => k.startsWith('dealcheck-'));
     if (ver) {
@@ -634,3 +634,5 @@ if ('caches' in window) {
     }
   });
 }
+if ('caches' in window) showVer();
+navigator.serviceWorker?.addEventListener('controllerchange', showVer);
