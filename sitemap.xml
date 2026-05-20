@@ -87,27 +87,71 @@
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/blog/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/"/>
   </url>
 
   <url>
     <loc>https://dealcheck-app.pages.dev/blog/bogo-vs-discount</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/bogo-vs-discount"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/bogo-vs-discount"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/blog/bogo-vs-discount</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/bogo-vs-discount"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/bogo-vs-discount"/>
   </url>
 
   <url>
     <loc>https://dealcheck-app.pages.dev/blog/supermarket-tips</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/supermarket-tips"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/supermarket-tips"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/blog/supermarket-tips</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/supermarket-tips"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/supermarket-tips"/>
   </url>
 
   <url>
     <loc>https://dealcheck-app.pages.dev/blog/pack-vs-bottle</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/pack-vs-bottle"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/pack-vs-bottle"/>
+  </url>
+
+  <url>
+    <loc>https://dealcheck-app.pages.dev/en/blog/pack-vs-bottle</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/blog/pack-vs-bottle"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/blog/pack-vs-bottle"/>
   </url>
 
 </urlset>
