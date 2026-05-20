@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" role="img" aria-label="Multi-pack vs single unit price comparison">
+  <title>Pack vs single: price per unit comparison</title>
+  <rect width="600" height="210" fill="#fef6fb" rx="14"/>
+  <text x="20" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="700" fill="#3d2645">Pack vs Single — who wins? (real examples)</text>
+
+  <!-- Header row -->
+  <rect x="20" y="42" width="560" height="24" rx="4" fill="#f472b6"/>
+  <text x="30" y="58" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Product</text>
+  <text x="290" y="58" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Price/unit</text>
+  <text x="450" y="58" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Verdict</text>
+
+  <!-- Row 1 - Cola single (winner) -->
+  <rect x="20" y="66" width="560" height="22" rx="2" fill="#dcfce7"/>
+  <text x="30" y="81" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">Cola 2L bottle (single)</text>
+  <text x="290" y="81" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">$0.028/oz</text>
+  <text x="450" y="81" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#16a34a">✓ Cheapest</text>
+
+  <!-- Row 2 - Cola 6-pack (loser) -->
+  <rect x="20" y="88" width="560" height="22" rx="2" fill="#fef2f2"/>
+  <text x="30" y="103" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">Cola 6-pack × 12oz cans</text>
+  <text x="290" y="103" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">$0.054/oz</text>
+  <text x="450" y="103" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#dc2626">✗ +93% more</text>
+
+  <!-- Row 3 - Chips large (winner) -->
+  <rect x="20" y="110" width="560" height="22" rx="2" fill="#dcfce7"/>
+  <text x="30" y="125" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">Chips large bag 8oz</text>
+  <text x="290" y="125" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">$0.94/oz</text>
+  <text x="450" y="125" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#16a34a">✓ 37% cheaper</text>
+
+  <!-- Row 4 - Detergent large (winner) -->
+  <rect x="20" y="132" width="560" height="22" rx="2" fill="#dcfce7"/>
+  <text x="30" y="147" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">Laundry detergent 96oz</text>
+  <text x="290" y="147" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">$0.063/oz</text>
+  <text x="450" y="147" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#16a34a">✓ 33% cheaper</text>
+
+  <!-- Row 5 - Yoghurt 4-pack (loser) -->
+  <rect x="20" y="154" width="560" height="22" rx="2" fill="#fef2f2"/>
+  <text x="30" y="169" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">Yoghurt 4-pack × 6oz cups</text>
+  <text x="290" y="169" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#3d2645">$0.23/oz</text>
+  <text x="450" y="169" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="700" fill="#dc2626">✗ +15% more</text>
+
+  <text x="20" y="200" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#a07898">Green = bulk wins · Red = single is cheaper · Always check unit price before buying</text>
+</svg>

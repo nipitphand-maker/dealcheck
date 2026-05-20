@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" role="img" aria-label="Promo discount comparison chart">
+  <title>Promo type vs equivalent discount</title>
+  <rect width="600" height="230" fill="#fef6fb" rx="14"/>
+  <text x="20" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="700" fill="#3d2645">Equivalent discount per promo type</text>
+
+  <!-- BOGO -->
+  <text x="20" y="60" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#3d2645">Buy 1 Get 1 (BOGO)</text>
+  <rect x="200" y="46" width="250" height="20" rx="4" fill="#f472b6"/>
+  <text x="458" y="61" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#f472b6">= 50% off</text>
+
+  <!-- Buy 2 Get 1 -->
+  <text x="20" y="95" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#3d2645">Buy 2 Get 1</text>
+  <rect x="200" y="81" width="165" height="20" rx="4" fill="#2dd4bf"/>
+  <text x="372" y="96" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#2dd4bf">= 33% off</text>
+
+  <!-- 40% off -->
+  <text x="20" y="130" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#3d2645">40% off label</text>
+  <rect x="200" y="116" width="200" height="20" rx="4" fill="#fb923c"/>
+  <text x="407" y="131" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">= 40% off</text>
+
+  <!-- Buy 3 Get 1 -->
+  <text x="20" y="165" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#3d2645">Buy 3 Get 1</text>
+  <rect x="200" y="151" width="125" height="20" rx="4" fill="#a78bfa"/>
+  <text x="331" y="166" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#a78bfa">= 25% off</text>
+
+  <!-- 10% off -->
+  <text x="20" y="200" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#3d2645">10% off label</text>
+  <rect x="200" y="186" width="50" height="20" rx="4" fill="#94a3b8"/>
+  <text x="257" y="201" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#94a3b8">= 10% off</text>
+
+  <text x="20" y="222" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#a07898">Higher bar = better deal · BOGO is always better than 40% off for the same item</text>
+</svg>
