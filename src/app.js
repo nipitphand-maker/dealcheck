@@ -624,3 +624,13 @@ document.querySelector('[data-action="closeIos"]')?.addEventListener('click', cl
 // ── INIT ──
 addItem(); addItem();
 renderHist();
+
+if ('caches' in window) {
+  caches.keys().then(keys => {
+    const ver = keys.find(k => k.startsWith('dealcheck-'));
+    if (ver) {
+      const el = document.getElementById('appVer');
+      if (el) el.textContent = ' · ' + ver.replace('dealcheck-', 'v');
+    }
+  });
+}
