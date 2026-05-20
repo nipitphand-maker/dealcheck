@@ -40,6 +40,7 @@
   Cache-Control: public, max-age=3600
 /sitemap.xml
   Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
 /ads.txt
   Cache-Control: public, max-age=3600
 
