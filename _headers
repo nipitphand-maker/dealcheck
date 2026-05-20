@@ -55,6 +55,10 @@
 /en/
   Cache-Control: public, max-age=300, must-revalidate
 
+# Blog images (SVG infographics) — long cache, rename file to bust
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # App JS modules — versioned via sw.js cache; medium cache OK
 /src/*
   Cache-Control: public, max-age=3600, must-revalidate

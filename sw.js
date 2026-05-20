@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v16';
+const CACHE = 'dealcheck-v17';
 const ASSETS = [
   '/',
   '/index.html',
@@ -20,6 +20,9 @@ const ASSETS = [
   '/en/blog/supermarket-tips.html',
   '/en/blog/pack-vs-bottle',
   '/en/blog/pack-vs-bottle.html',
+  '/img/blog/bogo-chart.svg',
+  '/img/blog/shopping-tips.svg',
+  '/img/blog/pack-vs-single.svg',
   '/manifest.json',
   '/en/manifest.json',
   '/favicon-32.png',
