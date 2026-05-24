@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v18';
+const CACHE = 'dealcheck-v19';
 const ASSETS = [
   '/',
   '/index.html',
@@ -24,6 +24,16 @@ const ASSETS = [
   '/img/blog/bogo-chart.svg',
   '/img/blog/shopping-tips.svg',
   '/img/blog/pack-vs-single.svg',
+  '/img/blog/bulk-vs-single.svg',
+  '/img/blog/unit-price.svg',
+  '/blog/bulk-vs-single',
+  '/blog/bulk-vs-single.html',
+  '/blog/unit-price-guide',
+  '/blog/unit-price-guide.html',
+  '/en/blog/bulk-vs-single',
+  '/en/blog/bulk-vs-single.html',
+  '/en/blog/unit-price-guide',
+  '/en/blog/unit-price-guide.html',
   '/manifest.json',
   '/en/manifest.json',
   '/favicon-32.png',

@@ -2,97 +2,98 @@
   <!-- Background -->
   <rect width="600" height="320" fill="#fef6fb" rx="16"/>
 
-  <!-- Title -->
-  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="900" fill="#3d2645" letter-spacing="-0.3">ราคาต่อหน่วย: ยกลัง vs ซื้อชิ้น</text>
-  <line x1="40" y1="48" x2="560" y2="48" stroke="#f0d6eb" stroke-width="2"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="600" height="50" fill="#f472b6" rx="16"/>
+  <rect x="0" y="34" width="600" height="16" fill="#f472b6"/>
+  <text x="300" y="31" text-anchor="middle" font-size="15" font-weight="900" fill="#fff" letter-spacing="-0.3">ราคาต่อหน่วย: ยกลัง vs ซื้อชิ้น</text>
 
   <!-- Table header background -->
-  <rect x="20" y="56" width="560" height="36" rx="8" fill="#f472b6"/>
+  <rect x="12" y="50" width="576" height="30" fill="#3d2645"/>
+  <text x="65"  y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">สินค้า</text>
+  <text x="185" y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">ซื้อชิ้นเดียว</text>
+  <text x="295" y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">บาท/หน่วย</text>
+  <text x="405" y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">ยกลัง/ใหญ่</text>
+  <text x="508" y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">บาท/หน่วย</text>
+  <text x="568" y="69" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">ชนะ</text>
 
-  <!-- Header text -->
-  <text x="30" y="79" font-size="12" font-weight="800" fill="#fff">สินค้า</text>
-  <text x="140" y="79" font-size="12" font-weight="800" fill="#fff">ชิ้นเดียว</text>
-  <text x="230" y="79" font-size="12" font-weight="800" fill="#fff">฿/หน่วย</text>
-  <text x="320" y="79" font-size="12" font-weight="800" fill="#fff">ยกลัง</text>
-  <text x="410" y="79" font-size="12" font-weight="800" fill="#fff">฿/หน่วย</text>
-  <text x="508" y="79" font-size="12" font-weight="800" fill="#fff">ผู้ชนะ</text>
+  <!-- ===== Row 1: น้ำดื่ม ===== -->
+  <rect x="12" y="80" width="576" height="52" fill="#fff"/>
+  <!-- Product -->
+  <text x="18"  y="102" font-size="13" font-weight="800" fill="#3d2645">น้ำดื่ม</text>
+  <text x="18"  y="118" font-size="10" fill="#a07898">600 ml / ขวด</text>
+  <!-- Single — loser -->
+  <text x="185" y="102" text-anchor="middle" font-size="12" fill="#3d2645">7 บ./ขวด</text>
+  <rect x="240" y="84" width="110" height="40" rx="6" fill="#fee2e2"/>
+  <text x="295" y="104" text-anchor="middle" font-size="13" font-weight="800" fill="#dc2626">0.0117</text>
+  <text x="295" y="118" text-anchor="middle" font-size="10" fill="#dc2626">บ./ml</text>
+  <!-- Bulk — winner -->
+  <text x="405" y="102" text-anchor="middle" font-size="12" fill="#3d2645">12×600ml=60 บ.</text>
+  <rect x="455" y="84" width="96" height="40" rx="6" fill="#d1fae5"/>
+  <text x="503" y="104" text-anchor="middle" font-size="13" font-weight="800" fill="#059669">0.0083</text>
+  <text x="503" y="118" text-anchor="middle" font-size="10" fill="#059669">บ./ml</text>
+  <!-- Winner label -->
+  <rect x="556" y="88" width="30" height="30" rx="6" fill="#2dd4bf"/>
+  <text x="571" y="108" text-anchor="middle" font-size="10" font-weight="900" fill="#fff">ลัง</text>
+  <line x1="12" y1="132" x2="588" y2="132" stroke="#f0d6eb" stroke-width="1"/>
 
-  <!-- Row 1: น้ำดื่ม (ยกลังชนะ) -->
-  <rect x="20" y="92" width="560" height="48" rx="4" fill="#fff"/>
-  <text x="30" y="112" font-size="13" font-weight="700" fill="#3d2645">น้ำดื่ม</text>
-  <text x="30" y="128" font-size="11" fill="#a07898">600 ml</text>
-  <text x="140" y="112" font-size="13" fill="#3d2645">7 บาท</text>
-  <text x="140" y="128" font-size="11" fill="#a07898">ต่อขวด</text>
-  <!-- loser cell -->
-  <rect x="222" y="95" width="80" height="42" rx="6" fill="#fee2e2"/>
-  <text x="262" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">0.012</text>
-  <text x="262" y="128" text-anchor="middle" font-size="10" fill="#dc2626">บ./ml</text>
-  <text x="320" y="112" font-size="13" fill="#3d2645">15 บาท</text>
-  <text x="320" y="128" font-size="11" fill="#a07898">1.5 L</text>
-  <!-- winner cell -->
-  <rect x="402" y="95" width="80" height="42" rx="6" fill="#d1fae5"/>
-  <text x="442" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">0.010</text>
-  <text x="442" y="128" text-anchor="middle" font-size="10" fill="#059669">บ./ml</text>
-  <text x="502" y="117" text-anchor="middle" font-size="19">📦</text>
+  <!-- ===== Row 2: น้ำยาล้างจาน ===== -->
+  <rect x="12" y="132" width="576" height="52" fill="#fdf2f8"/>
+  <text x="18"  y="154" font-size="13" font-weight="800" fill="#3d2645">น้ำยาล้างจาน</text>
+  <text x="18"  y="170" font-size="10" fill="#a07898">500 ml / ขวด</text>
+  <!-- Single — loser -->
+  <text x="185" y="154" text-anchor="middle" font-size="12" fill="#3d2645">35 บ./ขวด</text>
+  <rect x="240" y="136" width="110" height="40" rx="6" fill="#fee2e2"/>
+  <text x="295" y="156" text-anchor="middle" font-size="13" font-weight="800" fill="#dc2626">0.070</text>
+  <text x="295" y="170" text-anchor="middle" font-size="10" fill="#dc2626">บ./ml</text>
+  <!-- Bulk — winner -->
+  <text x="405" y="154" text-anchor="middle" font-size="12" fill="#3d2645">3,000ml=180 บ.</text>
+  <rect x="455" y="136" width="96" height="40" rx="6" fill="#d1fae5"/>
+  <text x="503" y="156" text-anchor="middle" font-size="13" font-weight="800" fill="#059669">0.060</text>
+  <text x="503" y="170" text-anchor="middle" font-size="10" fill="#059669">บ./ml</text>
+  <rect x="556" y="140" width="30" height="30" rx="6" fill="#2dd4bf"/>
+  <text x="571" y="160" text-anchor="middle" font-size="10" font-weight="900" fill="#fff">ลัง</text>
+  <line x1="12" y1="184" x2="588" y2="184" stroke="#f0d6eb" stroke-width="1"/>
 
-  <!-- Row 2: น้ำยาล้างจาน (ยกลังชนะ) -->
-  <rect x="20" y="140" width="560" height="48" rx="4" fill="#fdf2f8"/>
-  <text x="30" y="160" font-size="13" font-weight="700" fill="#3d2645">น้ำยาล้างจาน</text>
-  <text x="30" y="176" font-size="11" fill="#a07898">500 ml</text>
-  <text x="140" y="160" font-size="13" fill="#3d2645">39 บาท</text>
-  <text x="140" y="176" font-size="11" fill="#a07898">ต่อขวด</text>
-  <!-- loser cell -->
-  <rect x="222" y="143" width="80" height="42" rx="6" fill="#fee2e2"/>
-  <text x="262" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">0.078</text>
-  <text x="262" y="176" text-anchor="middle" font-size="10" fill="#dc2626">บ./ml</text>
-  <text x="320" y="160" font-size="13" fill="#3d2645">129 บาท</text>
-  <text x="320" y="176" font-size="11" fill="#a07898">2,000 ml</text>
-  <!-- winner cell -->
-  <rect x="402" y="143" width="80" height="42" rx="6" fill="#d1fae5"/>
-  <text x="442" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">0.065</text>
-  <text x="442" y="176" text-anchor="middle" font-size="10" fill="#059669">บ./ml</text>
-  <text x="502" y="165" text-anchor="middle" font-size="19">📦</text>
+  <!-- ===== Row 3: โยเกิร์ต — single wins! ===== -->
+  <rect x="12" y="184" width="576" height="52" fill="#fff"/>
+  <text x="18"  y="206" font-size="13" font-weight="800" fill="#3d2645">โยเกิร์ต</text>
+  <text x="18"  y="222" font-size="10" fill="#a07898">150 g / ถ้วย</text>
+  <!-- Single — winner -->
+  <text x="185" y="206" text-anchor="middle" font-size="12" fill="#3d2645">15 บ./ถ้วย</text>
+  <rect x="240" y="188" width="110" height="40" rx="6" fill="#d1fae5"/>
+  <text x="295" y="208" text-anchor="middle" font-size="13" font-weight="800" fill="#059669">0.100</text>
+  <text x="295" y="222" text-anchor="middle" font-size="10" fill="#059669">บ./g</text>
+  <!-- 4-pack — loser -->
+  <text x="405" y="206" text-anchor="middle" font-size="12" fill="#3d2645">4 ถ้วย=65 บ.</text>
+  <rect x="455" y="188" width="96" height="40" rx="6" fill="#fee2e2"/>
+  <text x="503" y="208" text-anchor="middle" font-size="13" font-weight="800" fill="#dc2626">0.108</text>
+  <text x="503" y="222" text-anchor="middle" font-size="10" fill="#dc2626">บ./g</text>
+  <rect x="556" y="192" width="30" height="30" rx="6" fill="#f472b6"/>
+  <text x="571" y="212" text-anchor="middle" font-size="9" font-weight="900" fill="#fff">ชิ้น</text>
+  <line x1="12" y1="236" x2="588" y2="236" stroke="#f0d6eb" stroke-width="1"/>
 
-  <!-- Row 3: โยเกิร์ต (ชิ้นเดียวชนะ เพราะโปร) -->
-  <rect x="20" y="188" width="560" height="48" rx="4" fill="#fff"/>
-  <text x="30" y="208" font-size="13" font-weight="700" fill="#3d2645">โยเกิร์ต</text>
-  <text x="30" y="224" font-size="11" fill="#a07898">180 g (1+1)</text>
-  <text x="140" y="208" font-size="13" fill="#3d2645">25 บาท</text>
-  <text x="140" y="224" font-size="11" fill="#a07898">โปร 1+1</text>
-  <!-- winner cell -->
-  <rect x="222" y="191" width="80" height="42" rx="6" fill="#d1fae5"/>
-  <text x="262" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">0.069</text>
-  <text x="262" y="224" text-anchor="middle" font-size="10" fill="#059669">บ./g</text>
-  <text x="320" y="208" font-size="13" fill="#3d2645">149 บาท</text>
-  <text x="320" y="224" font-size="11" fill="#a07898">6 ถ้วย</text>
-  <!-- loser cell -->
-  <rect x="402" y="191" width="80" height="42" rx="6" fill="#fee2e2"/>
-  <text x="442" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">0.138</text>
-  <text x="442" y="224" text-anchor="middle" font-size="10" fill="#dc2626">บ./g</text>
-  <text x="502" y="213" text-anchor="middle" font-size="19">🛒</text>
+  <!-- ===== Row 4: ทิชชู่ ===== -->
+  <rect x="12" y="236" width="576" height="52" fill="#fdf2f8"/>
+  <text x="18"  y="258" font-size="13" font-weight="800" fill="#3d2645">ทิชชู่</text>
+  <text x="18"  y="274" font-size="10" fill="#a07898">4 ม้วน / แพค</text>
+  <!-- Single — loser -->
+  <text x="185" y="258" text-anchor="middle" font-size="12" fill="#3d2645">39 บ. (4 ม้วน)</text>
+  <rect x="240" y="240" width="110" height="40" rx="6" fill="#fee2e2"/>
+  <text x="295" y="260" text-anchor="middle" font-size="13" font-weight="800" fill="#dc2626">9.75</text>
+  <text x="295" y="274" text-anchor="middle" font-size="10" fill="#dc2626">บ./ม้วน</text>
+  <!-- Bulk — winner -->
+  <text x="405" y="258" text-anchor="middle" font-size="12" fill="#3d2645">12 ม้วน=99 บ.</text>
+  <rect x="455" y="240" width="96" height="40" rx="6" fill="#d1fae5"/>
+  <text x="503" y="260" text-anchor="middle" font-size="13" font-weight="800" fill="#059669">8.25</text>
+  <text x="503" y="274" text-anchor="middle" font-size="10" fill="#059669">บ./ม้วน</text>
+  <rect x="556" y="244" width="30" height="30" rx="6" fill="#2dd4bf"/>
+  <text x="571" y="264" text-anchor="middle" font-size="10" font-weight="900" fill="#fff">ลัง</text>
 
-  <!-- Row 4: ทิชชู่ (ยกลังชนะ) -->
-  <rect x="20" y="236" width="560" height="48" rx="4" fill="#fdf2f8"/>
-  <text x="30" y="256" font-size="13" font-weight="700" fill="#3d2645">ทิชชู่</text>
-  <text x="30" y="272" font-size="11" fill="#a07898">1 แพค 6 ม้วน</text>
-  <text x="140" y="256" font-size="13" fill="#3d2645">45 บาท</text>
-  <text x="140" y="272" font-size="11" fill="#a07898">ต่อแพค</text>
-  <!-- loser cell -->
-  <rect x="222" y="239" width="80" height="42" rx="6" fill="#fee2e2"/>
-  <text x="262" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">7.50</text>
-  <text x="262" y="272" text-anchor="middle" font-size="10" fill="#dc2626">บ./ม้วน</text>
-  <text x="320" y="256" font-size="13" fill="#3d2645">159 บาท</text>
-  <text x="320" y="272" font-size="11" fill="#a07898">3 แพค (18 ม้วน)</text>
-  <!-- winner cell -->
-  <rect x="402" y="239" width="80" height="42" rx="6" fill="#d1fae5"/>
-  <text x="442" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">5.88</text>
-  <text x="442" y="272" text-anchor="middle" font-size="10" fill="#059669">บ./ม้วน</text>
-  <text x="502" y="261" text-anchor="middle" font-size="19">📦</text>
-
-  <!-- Legend -->
-  <rect x="20" y="292" width="14" height="14" rx="3" fill="#d1fae5"/>
-  <text x="38" y="304" font-size="11" fill="#059669" font-weight="700">ถูกกว่า</text>
-  <rect x="110" y="292" width="14" height="14" rx="3" fill="#fee2e2"/>
-  <text x="128" y="304" font-size="11" fill="#dc2626" font-weight="700">แพงกว่า</text>
-  <text x="300" y="304" text-anchor="middle" font-size="10" fill="#a07898">dealcheck-app.pages.dev</text>
+  <!-- Footer legend -->
+  <rect x="12" y="296" width="576" height="16" fill="#f0d6eb" rx="4"/>
+  <rect x="18" y="299" width="10" height="10" rx="2" fill="#d1fae5"/>
+  <text x="32" y="309" font-size="9" fill="#059669" font-weight="700">ถูกกว่า</text>
+  <rect x="78" y="299" width="10" height="10" rx="2" fill="#fee2e2"/>
+  <text x="92" y="309" font-size="9" fill="#dc2626" font-weight="700">แพงกว่า</text>
+  <text x="580" y="309" text-anchor="end" font-size="9" fill="#a07898">dealcheck-app.pages.dev</text>
 </svg>
