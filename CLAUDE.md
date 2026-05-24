@@ -10,7 +10,7 @@
 - AdSense client: `ca-pub-7049269744581719`
 
 ## Service Worker
-- Current version: `dealcheck-v19` (ใน `sw.js`)
+- Current version: `dealcheck-v20` (ใน `sw.js`)
 - เวลา bump ต้อง update `const CACHE = 'dealcheck-vXX'` และเพิ่ม assets ใหม่ใน ASSETS array
 
 ## Blog Articles
