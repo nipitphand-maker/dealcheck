@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v17';
+const CACHE = 'dealcheck-v18';
 const ASSETS = [
   '/',
   '/index.html',
@@ -12,6 +12,7 @@ const ASSETS = [
   '/en/about.html',
   '/src/core.js',
   '/src/app.js',
+  '/src/analytics.js',
   '/en/blog/',
   '/en/blog/index.html',
   '/en/blog/bogo-vs-discount',
