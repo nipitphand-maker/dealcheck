@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280" font-family="'Helvetica Neue',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="600" height="280" fill="#fef6fb" rx="16"/>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="900" fill="#3d2645" letter-spacing="-0.3">วิธีคำนวณราคาต่อหน่วย</text>
+  <line x1="40" y1="46" x2="560" y2="46" stroke="#f0d6eb" stroke-width="2"/>
+
+  <!-- Formula box -->
+  <rect x="60" y="58" width="480" height="54" rx="12" fill="#fff" stroke="#f472b6" stroke-width="2"/>
+  <text x="300" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#3d2645">สูตร:</text>
+  <text x="300" y="103" text-anchor="middle" font-size="20" font-weight="900" fill="#f472b6" letter-spacing="1">ราคา ÷ ปริมาณ = ราคาต่อหน่วย</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="118" x2="300" y2="132" stroke="#2dd4bf" stroke-width="2.5" stroke-dasharray="4,2"/>
+  <polygon points="300,136 294,126 306,126" fill="#2dd4bf"/>
+
+  <!-- Example calculation box -->
+  <rect x="140" y="140" width="320" height="42" rx="10" fill="#f0fdf4" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="300" y="157" text-anchor="middle" font-size="13" fill="#3d2645" font-weight="700">ตัวอย่าง: น้ำดื่ม 1.5L ราคา 15 บาท</text>
+  <text x="300" y="175" text-anchor="middle" font-size="14" font-weight="900" fill="#059669">15 บาท ÷ 1,500 ml = 0.010 บาท/ml</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="198" x2="560" y2="198" stroke="#f0d6eb" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- Comparison section -->
+  <text x="300" y="217" text-anchor="middle" font-size="13" font-weight="800" fill="#3d2645">เปรียบราคา: น้ำดื่ม 2 ขนาด</text>
+
+  <!-- Option A: 600ml (more expensive per ml) -->
+  <rect x="30" y="226" width="250" height="44" rx="10" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="50" y="245" font-size="13" font-weight="700" fill="#dc2626">น้ำ 600 ml @ 7 บาท</text>
+  <text x="50" y="262" font-size="12" fill="#dc2626">= 0.012 บาท/ml</text>
+  <text x="258" y="256" text-anchor="end" font-size="22">🔴</text>
+
+  <!-- Option B: 1.5L (cheaper per ml) -->
+  <rect x="320" y="226" width="250" height="44" rx="10" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="340" y="245" font-size="13" font-weight="700" fill="#059669">น้ำ 1.5 L @ 15 บาท</text>
+  <text x="340" y="262" font-size="12" fill="#059669">= 0.010 บาท/ml  ✓ คุ้มกว่า</text>
+  <text x="548" y="256" text-anchor="end" font-size="22">🟢</text>
+
+  <!-- Footer -->
+  <text x="300" y="278" text-anchor="middle" font-size="10" fill="#a07898">dealcheck-app.pages.dev — คำนวณราคาต่อหน่วยอัตโนมัติ</text>
+</svg>
