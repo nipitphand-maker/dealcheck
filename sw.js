@@ -1,4 +1,4 @@
-const CACHE = 'dealcheck-v20';
+const CACHE = 'dealcheck-v21';
 const ASSETS = [
   '/',
   '/index.html',
@@ -14,6 +14,14 @@ const ASSETS = [
   '/src/app.js',
   '/src/analytics.js',
   '/src/lang-redirect.js',
+  '/blog/',
+  '/blog/index.html',
+  '/blog/bogo-vs-discount',
+  '/blog/bogo-vs-discount.html',
+  '/blog/supermarket-tips',
+  '/blog/supermarket-tips.html',
+  '/blog/pack-vs-bottle',
+  '/blog/pack-vs-bottle.html',
   '/en/blog/',
   '/en/blog/index.html',
   '/en/blog/bogo-vs-discount',
@@ -39,6 +47,7 @@ const ASSETS = [
   '/en/manifest.json',
   '/favicon-32.png',
   '/icon-192.png',
+  '/icon-512.png',
   '/apple-touch-icon.png',
   '/logo-68.webp',
   '/logo-68.png',
