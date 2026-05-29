@@ -10,7 +10,7 @@
 - AdSense client: `ca-pub-7049269744581719`
 
 ## Service Worker
-- Current version: `dealcheck-v21` (ใน `sw.js`)
+- Current version: `dealcheck-v22` (ใน `sw.js`)
 - เวลา bump ต้อง update `const CACHE = 'dealcheck-vXX'` และเพิ่ม assets ใหม่ใน ASSETS array
 
 ## Blog Articles
@@ -21,6 +21,11 @@
 | pack-vs-bottle | ✅ | ✅ | 18 พ.ค. 2026 |
 | bulk-vs-single | ✅ | ✅ | 24 พ.ค. 2026 |
 | unit-price-guide | ✅ | ✅ | 24 พ.ค. 2026 |
+| store-layout-tricks | ✅ | ✅ | 29 พ.ค. 2026 |
+| promo-bundling | ✅ | ✅ | 29 พ.ค. 2026 |
+| online-vs-offline-grocery | ✅ | ✅ | 29 พ.ค. 2026 |
+| seasonal-shopping | ✅ | ✅ | 29 พ.ค. 2026 |
+| expired-soon-deals | ✅ | ✅ | 29 พ.ค. 2026 |
 
 ## เวลาเพิ่มบทความใหม่ ต้องอัปเดต
 1. `blog/index.html` — เพิ่ม post card
