@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"><meta name="google-site-verification" content="YPFBI_qSMc8OWCAuNyRFKw-xe0C4d0xpLsZKSqlNb-s"><meta name="msvalidate.01" content="7616C11407C905E02821314885823365">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>เกี่ยวกับ DealCheck — ใครเป็นผู้พัฒนา? ติดต่อได้ที่ไหน?</title>
-<meta name="description" content="DealCheck คือเครื่องมือเปรียบราคาสินค้าซูเปอร์มาร์เก็ตที่ฟรี ไม่เก็บข้อมูล สร้างโดย indie developer ในประเทศไทย ปี 2026">
+<title>เกี่ยวกับ DealCheck — ใครสร้าง? ทำไม? ติดต่อได้ที่ไหน?</title>
+<meta name="description" content="DealCheck คือเครื่องมือเปรียบราคาสินค้าซูเปอร์มาร์เก็ตฟรี สร้างโดย Nipitphand นักพัฒนา indie จากประเทศไทย เพื่อช่วยทุกคนซื้อของให้คุ้มที่สุด">
 <link rel="canonical" href="https://dealcheck-app.pages.dev/about">
 <link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/about">
 <link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/about">
@@ -14,24 +14,39 @@
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.7;padding:24px 16px 60px}
-.wrap{max-width:680px;margin:0 auto;background:#fff;border:2px solid #f0d6eb;border-radius:20px;padding:32px 24px;box-shadow:0 4px 20px rgba(244,114,182,.06)}
+body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.8;padding:24px 16px 60px}
+.wrap{max-width:680px;margin:0 auto}
+.card{background:#fff;border:2px solid #f0d6eb;border-radius:20px;padding:32px 24px;box-shadow:0 4px 20px rgba(244,114,182,.06);margin-bottom:20px}
 .logo{font-family:'Nunito','Helvetica Neue',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-1px;margin-bottom:4px;display:flex;align-items:center;gap:10px}
 .logo .d{color:#f472b6}.logo .c{color:#2dd4bf}
 .logo img{width:40px;height:40px;border-radius:8px}
-h1{font-size:1.5rem;font-weight:800;margin:20px 0 8px;color:#3d2645}
-h2{font-size:1.1rem;font-weight:800;margin:24px 0 10px;color:#3d2645;padding-left:8px;border-left:3px solid #f472b6}
-p{margin-bottom:12px;font-size:.95rem}
-ul{padding-left:22px;margin-bottom:12px}
-li{margin-bottom:8px;font-size:.95rem}
+h1{font-size:1.6rem;font-weight:900;margin:16px 0 8px;color:#3d2645;line-height:1.3}
+h2{font-size:1.15rem;font-weight:800;margin:28px 0 10px;color:#3d2645;padding-left:10px;border-left:4px solid #f472b6}
+h3{font-size:1rem;font-weight:800;margin:16px 0 6px;color:#3d2645}
+p{margin-bottom:14px;font-size:.95rem}
+ul{padding-left:22px;margin-bottom:14px}
+li{margin-bottom:10px;font-size:.95rem}
 a{color:#f472b6;text-decoration:none}
 a:hover{text-decoration:underline}
-.back{display:inline-block;margin-top:20px;padding:12px 24px;background:linear-gradient(135deg,#f472b6,#fb7185);color:#fff;border-radius:99px;font-weight:800;font-size:.95rem}
-.lang{text-align:right;margin-bottom:8px;font-size:.85rem}
-.lang a{color:#a07898;font-weight:700;padding:3px 8px;border:1px solid #f0d6eb;border-radius:99px}
+.btn{display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#f472b6,#fb7185);color:#fff;border-radius:99px;font-weight:800;font-size:.95rem}
+.btn-ghost{background:#fff;color:#3d2645;border:2px solid #f0d6eb;box-shadow:none}
+.lang{text-align:right;margin-bottom:12px;font-size:.85rem}
+.lang a{color:#a07898;font-weight:700;padding:3px 10px;border:1px solid #f0d6eb;border-radius:99px;text-decoration:none}
 .lang a.on{background:#3d2645;color:#fff;border-color:#3d2645}
-.values{background:#fdf2f8;border-radius:14px;padding:18px;margin:14px 0}
+.values{background:#fdf2f8;border-radius:14px;padding:18px 20px;margin:14px 0}
 .values li{list-style:none;padding-left:0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:480px){.feature-grid{grid-template-columns:1fr}}
+.feat{background:#fdf2f8;border:1.5px solid #f0d6eb;border-radius:14px;padding:16px}
+.feat-icon{font-size:1.4rem;margin-bottom:6px}
+.feat h3{margin:0 0 4px;font-size:.92rem}
+.feat p{font-size:.82rem;color:#a07898;margin:0}
+.timeline{margin:14px 0}
+.tl-item{display:flex;gap:16px;margin-bottom:16px}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:#f472b6;margin-top:6px;flex-shrink:0}
+.tl-body h3{margin:0 0 2px;font-size:.95rem}
+.tl-body p{margin:0;font-size:.88rem;color:#a07898}
+.contact-box{background:#f0fdf4;border:1.5px solid #2dd4bf;border-radius:14px;padding:18px;margin:14px 0}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEYCFH10JN"></script>
 <script src="/src/analytics.js"></script>
@@ -42,49 +57,82 @@ a:hover{text-decoration:underline}
     <a href="/about" class="on">TH</a>
     <a href="/en/about">EN</a>
   </div>
-  <div class="logo">
-    <span><span class="d">Deal</span><span class="c">Check</span></span>
-    <img src="/icon-192.png" alt="">
-  </div>
-  <h1>เกี่ยวกับ DealCheck</h1>
 
-  <p>DealCheck เป็นเครื่องมือเปรียบราคาสินค้าซูเปอร์มาร์เก็ตที่สร้างขึ้นปี 2026 โดย <strong>Nipitphand</strong> นักพัฒนา indie จากประเทศไทย เพื่อช่วยผู้บริโภคตัดสินใจซื้อของให้คุ้มที่สุดทุกครั้ง</p>
+  <div class="card">
+    <div class="logo">
+      <span><span class="d">Deal</span><span class="c">Check</span></span>
+      <img src="/icon-192.png" alt="DealCheck icon">
+    </div>
+    <h1>เกี่ยวกับ DealCheck</h1>
+    <p>DealCheck เป็นเครื่องมือเปรียบราคาสินค้าซูเปอร์มาร์เก็ตที่ฟรี ไม่ต้องโหลดแอป ใช้ได้ผ่านเบราว์เซอร์โดยตรง สร้างขึ้นในปี 2026 โดย <strong>Nipitphand</strong> นักพัฒนา indie จากประเทศไทย เพื่อช่วยให้ผู้บริโภคทุกคนตัดสินใจซื้อของได้ดีขึ้น — โดยไม่ต้องคำนวณในใจขณะเดินซูเปอร์</p>
 
-  <h2>แนวคิด</h2>
-  <p>หลายครั้งในซูเปอร์มาร์เก็ต เราเจอโปรโมชั่นซับซ้อน — 1 แถม 1, ลด 40%, แพคใหญ่, ราคาพิเศษ. การคำนวณในใจขณะเดินช้อปไม่ง่าย โดยเฉพาะเมื่อสินค้ามีขนาดต่างกัน หรือต่างยี่ห้อ</p>
-  <p>DealCheck แก้ปัญหานี้ด้วยเครื่องมือเดียว — แค่กรอกราคาและปริมาณของแต่ละชิ้น แอปจะคำนวณ <strong>ราคาต่อหน่วย</strong> ให้ทันที พร้อมบอกชัดว่าอันไหนคุ้มกว่ากี่เปอร์เซ็นต์</p>
+    <h2>ปัญหาที่ทำให้เกิด DealCheck</h2>
+    <p>ลองนึกภาพสถานการณ์นี้: คุณยืนอยู่ในทางเดินซูเปอร์มาร์เก็ต มีน้ำยาล้างจานสองยี่ห้อตรงหน้า — ขวดหนึ่งปกติราคา 89 บาท 500ml อีกขวดโปร 1 แถม 1 ราคา 159 บาท 450ml. อันไหนคุ้มกว่า? ต้องใช้เวลาคำนวณสักแค่ไหน?</p>
+    <p>นี่คือปัญหาที่เกิดขึ้นกับทุกคนทุกครั้งที่ไปซื้อของ ซูเปอร์มาร์เก็ตในปัจจุบันมีโปรโมชั่นหลายร้อยรายการ ทั้ง 1 แถม 1, 2 แถม 1, ลด 30%, แพคใหญ่, ของแถม — และสินค้ายังมาในขนาดต่างๆ กัน ทำให้การเปรียบราคาจริงๆ เป็นเรื่องยาก</p>
+    <p>DealCheck แก้ปัญหานี้ใน 3 วินาที — กรอกราคาและปริมาณของแต่ละชิ้น กดเปรียบ ระบบจะคำนวณราคาต่อหน่วย (ต่อ ml, ต่อ g, หรือต่อชิ้น) ให้ทันที และบอกชัดว่าอันไหนคุ้มกว่ากี่เปอร์เซ็นต์</p>
 
-  <h2>ค่านิยม</h2>
-  <div class="values">
+    <h2>ฟีเจอร์หลัก</h2>
+    <div class="feature-grid">
+      <div class="feat"><div class="feat-icon">⚖️</div><h3>ราคาต่อหน่วยอัตโนมัติ</h3><p>คำนวณต่อ ml, g, หรือชิ้น — เปรียบต่างขนาดได้ทันที</p></div>
+      <div class="feat"><div class="feat-icon">🎁</div><h3>รองรับทุกโปรโมชั่น</h3><p>1 แถม 1, 2 แถม 1, ลด%, และกำหนดเองได้</p></div>
+      <div class="feat"><div class="feat-icon">📦</div><h3>Pack Mode</h3><p>โค้กแพ็ค 6 ขวด × 325ml กรอกตรงๆ ไม่ต้องคิดก่อน</p></div>
+      <div class="feat"><div class="feat-icon">📊</div><h3>เปรียบได้ถึง 5 ชิ้น</h3><p>จัดอันดับจากคุ้มสุดไปถึงแพงสุดในครั้งเดียว</p></div>
+      <div class="feat"><div class="feat-icon">📋</div><h3>ประวัติ 10 รายการ</h3><p>จำผลเปรียบล่าสุดไว้ ไม่ต้องกรอกใหม่</p></div>
+      <div class="feat"><div class="feat-icon">📴</div><h3>ใช้ได้ Offline</h3><p>ติดตั้งเป็น PWA แล้วใช้แม้ไม่มี internet</p></div>
+    </div>
+
+    <h2>ค่านิยมของเรา</h2>
+    <div class="values">
+      <ul>
+        <li>✅ <strong>ฟรีตลอด</strong> — ไม่มีบัญชี ไม่มี subscription ไม่มีค่าใช้จ่ายซ่อน</li>
+        <li>🔒 <strong>ส่วนตัว 100%</strong> — ไม่เก็บข้อมูลส่วนตัว ทุกอย่างอยู่บน browser ของคุณเท่านั้น</li>
+        <li>⚡ <strong>เบาและเร็ว</strong> — ไม่มี framework หนักๆ โหลดไวแม้ 3G</li>
+        <li>🌏 <strong>รองรับ 2 ภาษา</strong> — ไทยและอังกฤษ เลือกได้ตามสะดวก</li>
+        <li>🚫 <strong>ไม่มีโฆษณาเต็มจอ</strong> — มีแค่ banner เล็กๆ จาก AdSense เพื่อสนับสนุนการพัฒนา</li>
+      </ul>
+    </div>
+
+    <h2>เส้นทางการพัฒนา</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>มกราคม 2026 — เริ่มต้นไอเดีย</h3><p>เกิดจากปัญหาส่วนตัวในซูเปอร์มาร์เก็ต ต้องการ app ที่คำนวณให้ทันที ไม่มี login ไม่โหลดนาน</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>มีนาคม 2026 — Version แรก</h3><p>ออก MVP รองรับการเปรียบ 2 สินค้า พร้อม unit price calculation พื้นฐาน</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>เมษายน 2026 — เพิ่ม Promo Types</h3><p>รองรับ 1 แถม 1, 2 แถม 1, ลด% และ Pack Mode เปรียบได้ถึง 5 ชิ้น</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>พฤษภาคม 2026 — เพิ่มบล็อก + EN</h3><p>เปิดบล็อกให้ความรู้เรื่องการช้อปฉลาด และเพิ่มหน้าภาษาอังกฤษ</p></div>
+      </div>
+    </div>
+
+    <h2>ผู้พัฒนา</h2>
+    <p>สวัสดีครับ ผม <strong>Nipitphand</strong> นักพัฒนา indie จากประเทศไทย ผมชอบสร้าง tool เล็กๆ ที่แก้ปัญหาชีวิตประจำวันได้จริง โดยไม่ซับซ้อนเกินไป</p>
+    <p>DealCheck เป็น project ที่มาจากความต้องการส่วนตัว — ผมใช้มันเองทุกครั้งที่ไปซูเปอร์มาร์เก็ต และหวังว่ามันจะช่วยคุณได้เช่นกัน</p>
+
+    <h2>ติดต่อและ Feedback</h2>
+    <div class="contact-box">
+      <p style="margin-bottom:8px">📧 <strong>Email:</strong> <a href="mailto:nipitphand@gmail.com">nipitphand@gmail.com</a></p>
+      <p style="margin:0;font-size:.9rem;color:#3d2645">มีข้อเสนอแนะ พบบัก หรืออยากเสนอฟีเจอร์ใหม่? ส่งมาได้เลยครับ ผมอ่านทุกฉบับและตอบทุกอัน</p>
+    </div>
+
+    <h2>แอปอื่นๆ ของผม</h2>
     <ul>
-      <li>✅ <strong>ฟรีตลอด</strong> — ไม่มีบัญชี ไม่มี subscription ไม่มีค่าใช้จ่ายแอบแฝง</li>
-      <li>🔒 <strong>ส่วนตัว</strong> — ไม่เก็บข้อมูลส่วนตัว ทุกอย่างอยู่บนเครื่องคุณ (browser local storage)</li>
-      <li>⚡ <strong>เบา + เร็ว</strong> — ไม่ต้องโหลดแอป เปิดผ่าน browser ได้ทันที</li>
-      <li>📱 <strong>Offline</strong> — ติดตั้งเป็น PWA แล้วใช้ได้แม้ไม่มี internet</li>
-      <li>🌏 <strong>Bilingual</strong> — รองรับทั้งภาษาไทยและอังกฤษ</li>
+      <li><strong>HuayCheck</strong> — ตรวจผลหวยไทย ลาว เวียดนาม บนมือถือ Android</li>
+      <li><strong>มีของมาส่ง</strong> — ติดตามสถานะพัสดุไทยทุกบริษัทขนส่ง</li>
     </ul>
-  </div>
 
-  <h2>ทำไมต้องฟรี?</h2>
-  <p>DealCheck แสดงโฆษณาแบบ banner เล็กๆ จาก Google AdSense เพื่อสนับสนุนการพัฒนา — แต่ไม่มีโฆษณาเต็มจอ ไม่มี popup กวนใจ และเราไม่ขายข้อมูลส่วนตัวของคุณให้ใครเลย</p>
-  <p>เป้าหมายคือทำเครื่องมือที่ช่วยคนซื้อของจริงๆ ในชีวิตประจำวัน — ไม่ใช่หาเงินจาก subscription หรือ paywall</p>
-
-  <h2>ติดต่อ + Feedback</h2>
-  <p>นักพัฒนา: <strong>Nipitphand</strong><br>
-  Email: <a href="mailto:nipitphand@gmail.com">nipitphand@gmail.com</a></p>
-  <p>มีข้อเสนอแนะ คำติชม พบบัก หรืออยากเสนอ feature ใหม่? ส่งมาได้ที่ email ด้านบน ผมอ่านทุกฉบับ</p>
-
-  <h2>โปรเจกต์อื่นๆ</h2>
-  <p>ผมพัฒนาแอปอื่นๆ ที่เน้นความเรียบง่ายและความเป็นส่วนตัวเช่นกัน:</p>
-  <ul>
-    <li><strong>HuayCheck</strong> — แอปตรวจหวยไทย-ลาว-เวียดนาม (Android)</li>
-    <li><strong>มีของมาส่ง</strong> — แอปเช็คพัสดุไทย (Android)</li>
-    <li><strong>DreamBaby</strong> — แอปกล่อมนอนสำหรับเด็กเล็ก (เร็วๆ นี้)</li>
-  </ul>
-
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
-    <a class="back" href="/">← กลับไปยังแอป</a>
-    <a class="back" href="/blog/" style="background:#fff;color:#3d2645;border:2px solid #f0d6eb;box-shadow:none">📚 บล็อก</a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px">
+      <a class="btn" href="/">← กลับไปยังแอป</a>
+      <a class="btn btn-ghost" href="/blog/">📚 อ่านบล็อก</a>
+      <a class="btn btn-ghost" href="/privacy">🔒 นโยบายความเป็นส่วนตัว</a>
+    </div>
   </div>
 </div>
 </body>

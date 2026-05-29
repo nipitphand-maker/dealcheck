@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"><meta name="google-site-verification" content="YPFBI_qSMc8OWCAuNyRFKw-xe0C4d0xpLsZKSqlNb-s"><meta name="msvalidate.01" content="7616C11407C905E02821314885823365">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About DealCheck — Who made it? How to contact?</title>
-<meta name="description" content="DealCheck is a free supermarket price comparison tool with no data tracking, built by an indie developer in Thailand, 2026.">
+<title>About DealCheck — Who Built It, Why, and How to Contact</title>
+<meta name="description" content="DealCheck is a free supermarket price comparison tool built by Nipitphand, an indie developer in Thailand. No accounts, no tracking, works offline.">
 <link rel="canonical" href="https://dealcheck-app.pages.dev/en/about">
 <link rel="alternate" hreflang="th" href="https://dealcheck-app.pages.dev/about">
 <link rel="alternate" hreflang="en" href="https://dealcheck-app.pages.dev/en/about">
@@ -14,24 +14,39 @@
 <link href="/fonts/fonts.css" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.7;padding:24px 16px 60px}
-.wrap{max-width:680px;margin:0 auto;background:#fff;border:2px solid #f0d6eb;border-radius:20px;padding:32px 24px;box-shadow:0 4px 20px rgba(244,114,182,.06)}
+body{font-family:'Sarabun','Helvetica Neue',sans-serif;background:#fef6fb;color:#3d2645;line-height:1.8;padding:24px 16px 60px}
+.wrap{max-width:680px;margin:0 auto}
+.card{background:#fff;border:2px solid #f0d6eb;border-radius:20px;padding:32px 24px;box-shadow:0 4px 20px rgba(244,114,182,.06);margin-bottom:20px}
 .logo{font-family:'Nunito','Helvetica Neue',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-1px;margin-bottom:4px;display:flex;align-items:center;gap:10px}
 .logo .d{color:#f472b6}.logo .c{color:#2dd4bf}
 .logo img{width:40px;height:40px;border-radius:8px}
-h1{font-size:1.5rem;font-weight:800;margin:20px 0 8px;color:#3d2645}
-h2{font-size:1.1rem;font-weight:800;margin:24px 0 10px;color:#3d2645;padding-left:8px;border-left:3px solid #f472b6}
-p{margin-bottom:12px;font-size:.95rem}
-ul{padding-left:22px;margin-bottom:12px}
-li{margin-bottom:8px;font-size:.95rem}
+h1{font-size:1.6rem;font-weight:900;margin:16px 0 8px;color:#3d2645;line-height:1.3}
+h2{font-size:1.15rem;font-weight:800;margin:28px 0 10px;color:#3d2645;padding-left:10px;border-left:4px solid #f472b6}
+h3{font-size:1rem;font-weight:800;margin:16px 0 6px;color:#3d2645}
+p{margin-bottom:14px;font-size:.95rem}
+ul{padding-left:22px;margin-bottom:14px}
+li{margin-bottom:10px;font-size:.95rem}
 a{color:#f472b6;text-decoration:none}
 a:hover{text-decoration:underline}
-.back{display:inline-block;margin-top:20px;padding:12px 24px;background:linear-gradient(135deg,#f472b6,#fb7185);color:#fff;border-radius:99px;font-weight:800;font-size:.95rem}
-.lang{text-align:right;margin-bottom:8px;font-size:.85rem}
-.lang a{color:#a07898;font-weight:700;padding:3px 8px;border:1px solid #f0d6eb;border-radius:99px}
+.btn{display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#f472b6,#fb7185);color:#fff;border-radius:99px;font-weight:800;font-size:.95rem}
+.btn-ghost{background:#fff;color:#3d2645;border:2px solid #f0d6eb;box-shadow:none}
+.lang{text-align:right;margin-bottom:12px;font-size:.85rem}
+.lang a{color:#a07898;font-weight:700;padding:3px 10px;border:1px solid #f0d6eb;border-radius:99px;text-decoration:none}
 .lang a.on{background:#3d2645;color:#fff;border-color:#3d2645}
-.values{background:#fdf2f8;border-radius:14px;padding:18px;margin:14px 0}
+.values{background:#fdf2f8;border-radius:14px;padding:18px 20px;margin:14px 0}
 .values li{list-style:none;padding-left:0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:480px){.feature-grid{grid-template-columns:1fr}}
+.feat{background:#fdf2f8;border:1.5px solid #f0d6eb;border-radius:14px;padding:16px}
+.feat-icon{font-size:1.4rem;margin-bottom:6px}
+.feat h3{margin:0 0 4px;font-size:.92rem}
+.feat p{font-size:.82rem;color:#a07898;margin:0}
+.timeline{margin:14px 0}
+.tl-item{display:flex;gap:16px;margin-bottom:16px}
+.tl-dot{width:12px;height:12px;border-radius:50%;background:#f472b6;margin-top:6px;flex-shrink:0}
+.tl-body h3{margin:0 0 2px;font-size:.95rem}
+.tl-body p{margin:0;font-size:.88rem;color:#a07898}
+.contact-box{background:#f0fdf4;border:1.5px solid #2dd4bf;border-radius:14px;padding:18px;margin:14px 0}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEYCFH10JN"></script>
 <script src="/src/analytics.js"></script>
@@ -42,49 +57,83 @@ a:hover{text-decoration:underline}
     <a href="/about">TH</a>
     <a href="/en/about" class="on">EN</a>
   </div>
-  <div class="logo">
-    <span><span class="d">Deal</span><span class="c">Check</span></span>
-    <img src="/icon-192.png" alt="">
-  </div>
-  <h1>About DealCheck</h1>
 
-  <p>DealCheck is a supermarket price comparison tool, built in 2026 by <strong>Nipitphand</strong>, an indie developer in Thailand, to help shoppers make the best buying decisions every time.</p>
+  <div class="card">
+    <div class="logo">
+      <span><span class="d">Deal</span><span class="c">Check</span></span>
+      <img src="/icon-192.png" alt="DealCheck icon">
+    </div>
+    <h1>About DealCheck</h1>
+    <p>DealCheck is a free, no-download supermarket price comparison tool built in 2026 by <strong>Nipitphand</strong>, an indie developer based in Thailand. The goal is simple: help every shopper instantly figure out which product is the best deal — without doing mental math in the aisle.</p>
 
-  <h2>The Idea</h2>
-  <p>Shopping in supermarkets often means navigating confusing promotions — Buy 1 Get 1, 40% off, multi-packs, special pricing. Calculating the real deal in your head while walking the aisles isn't easy, especially when products come in different sizes or brands.</p>
-  <p>DealCheck solves this with a single tool — enter the price and quantity of each item, and the app instantly calculates the <strong>unit price</strong> and tells you which is cheaper, and by how many percent.</p>
+    <h2>The Problem That Sparked DealCheck</h2>
+    <p>Picture this: you're standing in the supermarket aisle with two dish soaps in front of you. One is a regular 500ml bottle at ฿89. The other is a Buy 1 Get 1 deal — 450ml bottles at ฿159 each. Which is actually cheaper per ml?</p>
+    <p>Most people either guess, pick the one that "feels" like a deal, or spend 30 seconds doing arithmetic on their phone. None of those options are great.</p>
+    <p>Supermarkets today run hundreds of simultaneous promotions — BOGO, Buy 2 Get 1, percentage discounts, multi-packs, bundle offers. Products come in dozens of sizes. Comparing real value is genuinely hard without a calculator, and that's exactly what DealCheck solves.</p>
+    <p>Enter the price and quantity, tap Compare — the app calculates the unit price (per ml, per g, or per piece) for every item and ranks them from cheapest to most expensive. Done in under 5 seconds.</p>
 
-  <h2>Values</h2>
-  <div class="values">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+      <div class="feat"><div class="feat-icon">⚖️</div><h3>Auto Unit Price</h3><p>Calculates per ml, g, or piece — compare any sizes instantly</p></div>
+      <div class="feat"><div class="feat-icon">🎁</div><h3>All Promo Types</h3><p>BOGO, Buy 2 Get 1, % off, custom — real price calculated automatically</p></div>
+      <div class="feat"><div class="feat-icon">📦</div><h3>Pack Mode</h3><p>Enter "6 × 325ml" directly — no pre-calculating needed</p></div>
+      <div class="feat"><div class="feat-icon">📊</div><h3>Compare Up to 5</h3><p>Rank up to 5 items from best to worst deal at once</p></div>
+      <div class="feat"><div class="feat-icon">📋</div><h3>History</h3><p>Last 10 comparisons saved — no re-entering needed</p></div>
+      <div class="feat"><div class="feat-icon">📴</div><h3>Works Offline</h3><p>Install as a PWA and use without internet connection</p></div>
+    </div>
+
+    <h2>Our Values</h2>
+    <div class="values">
+      <ul>
+        <li>✅ <strong>Free forever</strong> — no accounts, no subscriptions, no hidden fees</li>
+        <li>🔒 <strong>Privacy-first</strong> — zero personal data tracking; everything stays in your browser's local storage</li>
+        <li>⚡ <strong>Lightweight and fast</strong> — no frameworks, no bloat; loads instantly even on 3G</li>
+        <li>🌏 <strong>Bilingual</strong> — Thai and English, switch anytime</li>
+        <li>🚫 <strong>No intrusive ads</strong> — small banner ads from Google AdSense only; no pop-ups, no overlays</li>
+      </ul>
+    </div>
+
+    <h2>Development Timeline</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>January 2026 — The Idea</h3><p>Born from a personal frustration in the supermarket. Wanted a tool that works instantly with no login and no slow loading.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>March 2026 — First Version</h3><p>Launched MVP supporting 2-item comparisons with basic unit price calculation.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>April 2026 — Promo Types Added</h3><p>BOGO, Buy 2 Get 1, percentage off, Pack Mode, and up to 5-item comparisons.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body"><h3>May 2026 — Blog + English Version</h3><p>Launched a grocery tips blog and full English-language support.</p></div>
+      </div>
+    </div>
+
+    <h2>About the Developer</h2>
+    <p>Hi, I'm <strong>Nipitphand</strong> — an indie developer from Thailand. I like building small tools that solve real everyday problems without unnecessary complexity.</p>
+    <p>DealCheck started as something I built for myself. I use it every time I go grocery shopping, and I hope it's useful for you too.</p>
+
+    <h2>Contact &amp; Feedback</h2>
+    <div class="contact-box">
+      <p style="margin-bottom:8px">📧 <strong>Email:</strong> <a href="mailto:nipitphand@gmail.com">nipitphand@gmail.com</a></p>
+      <p style="margin:0;font-size:.9rem;color:#3d2645">Have feedback, found a bug, or want to suggest a feature? Send me an email — I read and reply to every message.</p>
+    </div>
+
+    <h2>Other Projects</h2>
     <ul>
-      <li>✅ <strong>Free forever</strong> — no accounts, no subscriptions, no hidden fees</li>
-      <li>🔒 <strong>Privacy-first</strong> — no personal data tracking, everything stays on your device (browser local storage)</li>
-      <li>⚡ <strong>Light + fast</strong> — no app download, runs directly in your browser</li>
-      <li>📱 <strong>Offline</strong> — install as a PWA and use it without internet</li>
-      <li>🌏 <strong>Bilingual</strong> — Thai and English support</li>
+      <li><strong>HuayCheck</strong> — Thai, Lao, and Vietnamese lottery checker for Android</li>
+      <li><strong>MeeKongMaSong</strong> — Thai parcel tracking app for Android</li>
     </ul>
-  </div>
 
-  <h2>Why free?</h2>
-  <p>DealCheck shows small banner ads from Google AdSense to support development — but no full-screen pop-ups, no intrusive overlays, and we never sell your personal data.</p>
-  <p>The goal is to build a real tool people actually use in daily shopping — not to extract money via subscriptions or paywalls.</p>
-
-  <h2>Contact + Feedback</h2>
-  <p>Developer: <strong>Nipitphand</strong><br>
-  Email: <a href="mailto:nipitphand@gmail.com">nipitphand@gmail.com</a></p>
-  <p>Have feedback, found a bug, or want to suggest a feature? Email me — I read every message.</p>
-
-  <h2>Other Projects</h2>
-  <p>I build other apps focused on simplicity and privacy:</p>
-  <ul>
-    <li><strong>HuayCheck</strong> — Thai/Lao/Vietnam lottery checker (Android)</li>
-    <li><strong>MeeKongMaSong</strong> — Thai parcel tracker (Android)</li>
-    <li><strong>DreamBaby</strong> — Baby sleep aid (coming soon)</li>
-  </ul>
-
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
-    <a class="back" href="/en/">← Back to app</a>
-    <a class="back" href="/blog/" style="background:#fff;color:#3d2645;border:2px solid #f0d6eb;box-shadow:none">📚 Blog</a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px">
+      <a class="btn" href="/en/">← Back to App</a>
+      <a class="btn btn-ghost" href="/en/blog/">📚 Blog</a>
+      <a class="btn btn-ghost" href="/en/privacy">🔒 Privacy Policy</a>
+    </div>
   </div>
 </div>
 </body>
